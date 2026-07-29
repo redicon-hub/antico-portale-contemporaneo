@@ -159,7 +159,7 @@ export function Kitchen() {
                 <PlateFrame
                   src={media.DISH_DETAIL_02}
                   alt="Composizione gourmet servita ad Antico Portale"
-                  title={t.menu.captions.gourmet}
+                  title={t.kitchen.captionWide}
                   ratio="aspect-[16/9]"
                 />
               </Reveal>

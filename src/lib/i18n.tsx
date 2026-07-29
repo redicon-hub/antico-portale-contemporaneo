@@ -61,7 +61,8 @@ export const copy = {
         },
       ],
       captionMain: "Pasta fresca e ragù toscano, cotture lunghe.",
-      captionSide: "Colore, acidità, temperatura: il piatto letto come composizione.",
+      captionSide: "Colore, acidità, temperatura.",
+      captionWide: "Fritto, crema di zucca, senape: la Toscana in un'altra grammatica.",
     },
     bao: {
       eyebrow: "Contaminazione",
@@ -200,7 +201,8 @@ export const copy = {
         { t: "Season", d: "A kitchen that shifts with availability, ripeness and instinct." },
       ],
       captionMain: "Fresh pasta and Tuscan ragù, long cooking.",
-      captionSide: "Colour, acidity, temperature: the plate read as composition.",
+      captionSide: "Colour, acidity, temperature.",
+      captionWide: "Fried, pumpkin cream, mustard: Tuscany in another grammar.",
     },
     bao: {
       eyebrow: "Crossing over",
