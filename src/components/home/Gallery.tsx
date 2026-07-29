@@ -144,55 +144,33 @@ export function Place() {
           </Reveal>
         </div>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-12 md:gap-10">
-          <Reveal className="md:col-span-4">
-            <img
-              src={media.WOODS_EXTERIOR}
-              alt="Il giardino e il verde intorno al casale"
-              loading="lazy"
-              decoding="async"
-              width={900}
-              height={1200}
-              className="aspect-[3/4] w-full object-cover"
-            />
-            <Caption>{t.place.captions.garden}</Caption>
-          </Reveal>
-          <Reveal delay={100} className="md:col-span-7 md:col-start-6 md:pt-20">
-            <img
-              src={media.OUTDOOR_SPACE}
-              alt="Lo spazio esterno del ristorante nel Valdarno"
-              loading="lazy"
-              decoding="async"
-              width={1400}
-              height={900}
-              className="aspect-[16/10] w-full object-cover"
-            />
-            <Caption>{t.place.captions.outside}</Caption>
-          </Reveal>
-          <Reveal delay={60} className="md:col-span-6 md:col-start-2">
-            <img
-              src={media.EXTERIOR_DAY}
-              alt="Esterno del ristorante Antico Portale ad Ambra, Bucine"
-              loading="lazy"
-              decoding="async"
-              width={1200}
-              height={800}
-              className="aspect-[3/2] w-full object-cover"
-            />
-            <Caption>{t.place.captions.patio}</Caption>
-          </Reveal>
-          <Reveal delay={140} className="md:col-span-4 md:col-start-9 md:pt-16">
-            <img
-              src={media.DINING_ROOM}
-              alt="La sala interna con il tavolo lungo, per tavolate ed esperienze private"
-              loading="lazy"
-              decoding="async"
-              width={900}
-              height={1200}
-              className="aspect-[3/4] w-full object-cover"
-            />
-            <Caption>{t.place.captions.inside}</Caption>
-          </Reveal>
+        <div className="mt-16 columns-1 gap-5 sm:columns-2 lg:columns-3 [column-fill:_balance]">
+          {[
+            { src: media.WOODS_EXTERIOR, alt: "Il giardino e il verde intorno al casale", ratio: "aspect-[3/4]" },
+            {
+              src: media.OUTDOOR_SPACE,
+              alt: "Lo spazio esterno del ristorante nel Valdarno",
+              ratio: "aspect-[16/10]",
+            },
+            {
+              src: media.EXTERIOR_DAY,
+              alt: "Esterno del ristorante Antico Portale ad Ambra, Bucine",
+              ratio: "aspect-[3/2]",
+            },
+            { src: media.DINING_ROOM, alt: "La sala interna con il tavolo lungo", ratio: "aspect-[3/4]" },
+            { src: media.TERRACE_02, alt: "Tavoli in terrazza d'estate", ratio: "aspect-[4/5]" },
+            { src: media.COURTYARD, alt: "Il cortile del casale", ratio: "aspect-[4/3]" },
+          ].map((im, i) => (
+            <Reveal key={im.alt} delay={(i % 3) * 90} className="mb-5 block break-inside-avoid">
+              <img
+                src={im.src}
+                alt={im.alt}
+                loading="lazy"
+                decoding="async"
+                className={`w-full object-cover ${im.ratio} transition-transform duration-[1200ms] ease-out hover:scale-[1.02]`}
+              />
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>
