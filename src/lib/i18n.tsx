@@ -67,6 +67,9 @@ export const copy = {
     bao: {
       eyebrow: "Contaminazione",
       title: "La Toscana può cambiare forma senza perdere la propria voce.",
+      caption1: "Bao toscano, prima portata",
+      caption2: "Il ripieno: memoria toscana, forma nuova",
+      note: "Una tecnica lontana, un impasto morbido, un ripieno che sa di casa.",
       text: "Ci sono piatti che partono da una tecnica lontana e ritrovano il proprio carattere attraverso ingredienti, sapori e memorie toscane. Il bao di Antico Portale nasce da questo incontro: non una provocazione, ma un modo diverso di raccontare il territorio.",
     },
     chef: {
@@ -207,6 +210,9 @@ export const copy = {
     bao: {
       eyebrow: "Crossing over",
       title: "Tuscany can change shape without losing its voice.",
+      caption1: "Tuscan bao, first course",
+      caption2: "The filling: Tuscan memory, new shape",
+      note: "A distant technique, a soft dough, a filling that tastes like home.",
       text: "Some dishes begin with a distant technique and find their character again through Tuscan ingredients, flavours and memory. The bao at Antico Portale comes from that meeting: not a provocation, but another way of telling this land.",
     },
     chef: {
