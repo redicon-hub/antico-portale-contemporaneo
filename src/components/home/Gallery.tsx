@@ -31,73 +31,30 @@ export function MenuGallery() {
           </Reveal>
         </div>
 
-        {/* Composizione editoriale asimmetrica */}
-        <div className="mt-16 grid gap-8 md:grid-cols-12 md:gap-10">
-          <Reveal className="md:col-span-5">
-            <img
-              src={media.DESSERT}
-              alt="Dessert contemporaneo di Antico Portale"
-              loading="lazy"
-              decoding="async"
-              width={1000}
-              height={1400}
-              className="aspect-[5/7] w-full object-cover"
-            />
-            <Caption>{t.menu.captions.dessert}</Caption>
-          </Reveal>
-
-          <div className="grid gap-8 md:col-span-6 md:col-start-7 md:gap-10 md:pt-28">
-            <Reveal delay={100}>
+        {/* Masonry editoriale: riempie lo spazio senza vuoti */}
+        <div className="mt-16 columns-1 gap-5 sm:columns-2 lg:columns-3 [column-fill:_balance]">
+          {[
+            { src: media.DESSERT, alt: "Dessert contemporaneo di Antico Portale", ratio: "aspect-[5/7]" },
+            {
+              src: media.DISH_DETAIL_02,
+              alt: "Piatto gourmet servito nel ristorante toscano del Valdarno",
+              ratio: "aspect-[3/2]",
+            },
+            { src: media.DISH_STEAK, alt: "Carne alla brace", ratio: "aspect-square" },
+            { src: media.DISH_FISH, alt: "Piatto di pesce, cucina toscana contemporanea", ratio: "aspect-[4/5]" },
+            { src: media.BREAD_TABLE, alt: "Pane e lievitati della casa in tavola", ratio: "aspect-[16/10]" },
+            { src: media.HANDMADE_PASTA, alt: "Pasta fresca fatta a mano", ratio: "aspect-[4/3]" },
+          ].map((im, i) => (
+            <Reveal key={im.alt} delay={(i % 3) * 90} className="mb-5 block break-inside-avoid">
               <img
-                src={media.DISH_DETAIL_02}
-                alt="Piatto gourmet servito nel ristorante toscano del Valdarno"
+                src={im.src}
+                alt={im.alt}
                 loading="lazy"
                 decoding="async"
-                width={1200}
-                height={800}
-                className="aspect-[3/2] w-full object-cover"
+                className={`w-full object-cover ${im.ratio} transition-transform duration-[1200ms] ease-out hover:scale-[1.02]`}
               />
-              <Caption>{t.menu.captions.gourmet}</Caption>
             </Reveal>
-            <Reveal delay={160}>
-              <img
-                src={media.DISH_FISH}
-                alt="Piatto di pesce, cucina toscana contemporanea"
-                loading="lazy"
-                decoding="async"
-                width={1200}
-                height={800}
-                className="aspect-[3/2] w-full object-cover"
-              />
-              <Caption>{t.menu.captions.fish}</Caption>
-            </Reveal>
-          </div>
-
-          <Reveal delay={80} className="md:col-span-4">
-            <img
-              src={media.DISH_STEAK}
-              alt="Dettaglio ravvicinato di carne alla brace"
-              loading="lazy"
-              decoding="async"
-              width={1000}
-              height={1000}
-              className="aspect-square w-full object-cover"
-            />
-            <Caption>{t.menu.captions.steak}</Caption>
-          </Reveal>
-
-          <Reveal delay={140} className="md:col-span-7 md:col-start-6">
-            <img
-              src={media.BREAD_TABLE}
-              alt="Pane e lievitati della casa in tavola"
-              loading="lazy"
-              decoding="async"
-              width={1400}
-              height={900}
-              className="aspect-[16/10] w-full object-cover"
-            />
-            <Caption>{t.menu.captions.bread}</Caption>
-          </Reveal>
+          ))}
         </div>
       </div>
     </section>
