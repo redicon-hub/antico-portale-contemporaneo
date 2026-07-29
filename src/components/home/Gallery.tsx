@@ -1,6 +1,6 @@
 import { useLang } from "@/lib/i18n";
 import { media } from "@/lib/media";
-import { Caption, Reveal } from "@/components/site/primitives";
+import { Reveal } from "@/components/site/primitives";
 
 export function MenuGallery() {
   const { t } = useLang();
