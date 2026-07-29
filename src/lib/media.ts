@@ -11,7 +11,7 @@ import bao1 from "@/assets/bao-1.png.asset.json";
 import bao2 from "@/assets/bao-2.jpg.asset.json";
 import piattoGourmet from "@/assets/piatto-gourmet.jpg.asset.json";
 import pesce from "@/assets/pesce.jpg.asset.json";
-import bistecca from "@/assets/bistecca.jpeg.asset.json";
+import bistecca from "@/assets/bistecca.jpg.asset.json";
 import paneMani from "@/assets/pane-mani.jpg.asset.json";
 import pane from "@/assets/pane.jpg.asset.json";
 import cocktailHero from "@/assets/cocktail-hero.jpg.asset.json";
