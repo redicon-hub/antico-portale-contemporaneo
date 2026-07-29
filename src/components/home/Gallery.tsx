@@ -31,31 +31,32 @@ export function MenuGallery() {
           </Reveal>
         </div>
 
-        {/* Masonry editoriale: riempie lo spazio senza vuoti */}
-        <div className="mt-16 columns-1 gap-5 sm:columns-2 lg:columns-3 [column-fill:_balance]">
+        {/* Griglia editoriale: altezze uniformi, titoli in sovraimpressione */}
+        <div className="mt-16 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {[
-            { src: media.DESSERT, alt: "Dessert contemporaneo di Antico Portale", ratio: "aspect-[4/5]" },
+            { src: media.DESSERT, alt: "Dessert contemporaneo di Antico Portale", title: t.menu.captions.dessert },
             {
               src: media.DISH_DETAIL_02,
               alt: "Piatto gourmet servito nel ristorante toscano del Valdarno",
-              ratio: "aspect-[3/2]",
+              title: t.menu.captions.gourmet,
             },
-            { src: media.DISH_FISH, alt: "Piatto di pesce, cucina toscana contemporanea", ratio: "aspect-[4/5]" },
-            { src: media.DISH_STEAK, alt: "Carne alla brace", ratio: "aspect-[3/2]" },
-            { src: media.HANDMADE_PASTA, alt: "Pasta fresca fatta a mano", ratio: "aspect-[4/5]" },
-            { src: media.BREAD_TABLE, alt: "Pane e lievitati della casa in tavola", ratio: "aspect-[3/2]" },
+            { src: media.DISH_FISH, alt: "Piatto di pesce, cucina toscana contemporanea", title: t.menu.captions.fish },
+            { src: media.DISH_STEAK, alt: "Carne alla brace", title: t.menu.captions.steak, position: "50% 55%" },
+            { src: media.HANDMADE_PASTA, alt: "Pasta fresca fatta a mano", title: t.menu.captions.pasta },
+            { src: media.BREAD_TABLE, alt: "Pane e lievitati della casa in tavola", title: t.menu.captions.bread },
           ].map((im, i) => (
-            <Reveal key={im.alt} delay={(i % 3) * 90} className="mb-5 block break-inside-avoid">
-              <img
+            <Reveal key={im.alt} delay={(i % 3) * 90}>
+              <PlateFrame
                 src={im.src}
                 alt={im.alt}
-                loading="lazy"
-                decoding="async"
-                className={`w-full object-cover ${im.ratio} transition-transform duration-[1200ms] ease-out hover:scale-[1.02]`}
+                title={im.title}
+                position={im.position ?? "center"}
+                ratio="aspect-[4/5]"
               />
             </Reveal>
           ))}
         </div>
+
       </div>
     </section>
   );
