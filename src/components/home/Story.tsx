@@ -177,47 +177,50 @@ export function Bao() {
   return (
     <section className="bg-ink py-24 text-ivory md:py-36">
       <div className="mx-auto max-w-[1500px] px-5 md:px-10">
-        <div className="grid items-center gap-12 md:grid-cols-12">
-          <Reveal className="md:col-span-6">
-            {/* TUSCAN_BAO */}
-            <img
-              src={media.TUSCAN_BAO}
-              alt="Bao reinterpretato in chiave toscana, Antico Portale"
-              loading="lazy"
-              decoding="async"
-              width={1200}
-              height={900}
-              className="aspect-[4/3] w-full object-cover"
-            />
-          </Reveal>
-          <div className="md:col-span-5 md:col-start-8">
-            <Reveal>
-              <p className="eyebrow text-copper">{t.bao.eyebrow}</p>
-            </Reveal>
-            <Reveal delay={80}>
-              <h2 className="display-md mt-6 max-w-[20ch]">{t.bao.title}</h2>
-            </Reveal>
-            <Reveal delay={160}>
-              <p className="body-copy mt-7 max-w-[46ch] text-ivory/70">{t.bao.text}</p>
-            </Reveal>
-            <Reveal delay={220} className="mt-10">
-              {/* TUSCAN_BAO_ALT */}
-              <img
-                src={media.TUSCAN_BAO_ALT}
-                alt="Dettaglio ravvicinato del bao toscano servito ad Antico Portale"
-                loading="lazy"
-                decoding="async"
-                width={900}
-                height={600}
-                className="aspect-[3/2] w-full object-cover"
-              />
-            </Reveal>
+        <div className="grid gap-12 md:grid-cols-12 md:gap-14">
+          {/* Colonna sinistra: manifesto della contaminazione */}
+          <div className="md:col-span-4">
+            <div className="md:sticky md:top-28">
+              <Reveal>
+                <p className="eyebrow text-copper">{t.bao.eyebrow}</p>
+                <h2 className="display-md mt-6 max-w-[18ch]">{t.bao.title}</h2>
+                <p className="body-copy mt-7 max-w-[42ch] text-ivory/70">{t.bao.text}</p>
+              </Reveal>
+              <Reveal delay={120}>
+                <p className="mt-10 border-t border-ivory/20 pt-6 max-w-[36ch] font-display text-lg font-light leading-snug text-ivory/80">
+                  {t.bao.note}
+                </p>
+              </Reveal>
+            </div>
+          </div>
+
+          {/* Colonna destra: dittico ad altezze uniformi */}
+          <div className="md:col-span-8">
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+              <Reveal>
+                <PlateFrame
+                  src={media.TUSCAN_BAO}
+                  alt="Bao reinterpretato in chiave toscana, Antico Portale"
+                  title={t.bao.caption1}
+                  ratio="aspect-[4/5]"
+                />
+              </Reveal>
+              <Reveal delay={90}>
+                <PlateFrame
+                  src={media.TUSCAN_BAO_ALT}
+                  alt="Dettaglio del bao toscano servito ad Antico Portale"
+                  title={t.bao.caption2}
+                  ratio="aspect-[4/5]"
+                />
+              </Reveal>
+            </div>
           </div>
         </div>
       </div>
     </section>
   );
 }
+
 
 export function ChefRagu() {
   const { t } = useLang();
