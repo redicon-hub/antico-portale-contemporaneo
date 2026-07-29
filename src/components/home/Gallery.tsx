@@ -158,7 +158,7 @@ export function Place() {
               alt: "Esterno del ristorante Antico Portale ad Ambra, Bucine",
               ratio: "aspect-[3/2]",
             },
-            { src: media.TERRACE_01, alt: "La terrazza al tramonto", ratio: "aspect-[3/4]" },
+            { src: media.ANCIENT_PORTAL, alt: "Il portale d'ingresso del casale", ratio: "aspect-[3/4]" },
             { src: media.COURTYARD, alt: "Il cortile del casale", ratio: "aspect-[3/2]" },
           ].map((im, i) => (
             <Reveal key={im.alt} delay={(i % 3) * 90} className="mb-5 block break-inside-avoid">
