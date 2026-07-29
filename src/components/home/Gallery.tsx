@@ -34,16 +34,16 @@ export function MenuGallery() {
         {/* Masonry editoriale: riempie lo spazio senza vuoti */}
         <div className="mt-16 columns-1 gap-5 sm:columns-2 lg:columns-3 [column-fill:_balance]">
           {[
-            { src: media.DESSERT, alt: "Dessert contemporaneo di Antico Portale", ratio: "aspect-[5/7]" },
+            { src: media.DESSERT, alt: "Dessert contemporaneo di Antico Portale", ratio: "aspect-[4/5]" },
             {
               src: media.DISH_DETAIL_02,
               alt: "Piatto gourmet servito nel ristorante toscano del Valdarno",
               ratio: "aspect-[3/2]",
             },
-            { src: media.DISH_STEAK, alt: "Carne alla brace", ratio: "aspect-square" },
             { src: media.DISH_FISH, alt: "Piatto di pesce, cucina toscana contemporanea", ratio: "aspect-[4/5]" },
-            { src: media.BREAD_TABLE, alt: "Pane e lievitati della casa in tavola", ratio: "aspect-[16/10]" },
-            { src: media.HANDMADE_PASTA, alt: "Pasta fresca fatta a mano", ratio: "aspect-[4/3]" },
+            { src: media.DISH_STEAK, alt: "Carne alla brace", ratio: "aspect-[3/2]" },
+            { src: media.HANDMADE_PASTA, alt: "Pasta fresca fatta a mano", ratio: "aspect-[4/5]" },
+            { src: media.BREAD_TABLE, alt: "Pane e lievitati della casa in tavola", ratio: "aspect-[3/2]" },
           ].map((im, i) => (
             <Reveal key={im.alt} delay={(i % 3) * 90} className="mb-5 block break-inside-avoid">
               <img
