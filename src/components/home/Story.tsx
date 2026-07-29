@@ -1,6 +1,6 @@
 import { useLang } from "@/lib/i18n";
 import { media } from "@/lib/media";
-import { Caption, Reveal, ShootPlaceholder } from "@/components/site/primitives";
+import { Caption, Reveal, ShootPlaceholder, PlateFrame } from "@/components/site/primitives";
 
 export function Manifesto() {
   const { t } = useLang();
