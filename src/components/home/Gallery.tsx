@@ -150,16 +150,16 @@ export function Place() {
             {
               src: media.OUTDOOR_SPACE,
               alt: "Lo spazio esterno del ristorante nel Valdarno",
-              ratio: "aspect-[16/10]",
+              ratio: "aspect-[3/2]",
             },
+            { src: media.DINING_ROOM, alt: "La sala interna con il tavolo lungo", ratio: "aspect-[3/4]" },
             {
               src: media.EXTERIOR_DAY,
               alt: "Esterno del ristorante Antico Portale ad Ambra, Bucine",
               ratio: "aspect-[3/2]",
             },
-            { src: media.DINING_ROOM, alt: "La sala interna con il tavolo lungo", ratio: "aspect-[3/4]" },
-            { src: media.HOT_BREAD, alt: "Il pane servito in sala", ratio: "aspect-[4/5]" },
-            { src: media.COURTYARD, alt: "Il cortile del casale", ratio: "aspect-[4/3]" },
+            { src: media.TERRACE_01, alt: "La terrazza al tramonto", ratio: "aspect-[3/4]" },
+            { src: media.COURTYARD, alt: "Il cortile del casale", ratio: "aspect-[3/2]" },
           ].map((im, i) => (
             <Reveal key={im.alt} delay={(i % 3) * 90} className="mb-5 block break-inside-avoid">
               <img
