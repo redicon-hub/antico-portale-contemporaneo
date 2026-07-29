@@ -145,34 +145,29 @@ export function Place() {
           </Reveal>
         </div>
 
-        <div className="mt-16 columns-1 gap-5 sm:columns-2 lg:columns-3 [column-fill:_balance]">
+        <div className="mt-16 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {[
-            { src: media.WOODS_EXTERIOR, alt: "Il giardino e il verde intorno al casale", ratio: "aspect-[3/4]" },
+            { src: media.ANCIENT_PORTAL, alt: "Il portale d'ingresso del casale", title: t.place.captions.portal },
+            { src: media.DINING_ROOM, alt: "La sala interna con il tavolo lungo", title: t.place.captions.inside },
+            { src: media.WOODS_EXTERIOR, alt: "Il giardino e il verde intorno al casale", title: t.place.captions.garden },
             {
               src: media.OUTDOOR_SPACE,
               alt: "Lo spazio esterno del ristorante nel Valdarno",
-              ratio: "aspect-[3/2]",
+              title: t.place.captions.outside,
             },
-            { src: media.DINING_ROOM, alt: "La sala interna con il tavolo lungo", ratio: "aspect-[3/4]" },
             {
               src: media.EXTERIOR_DAY,
               alt: "Esterno del ristorante Antico Portale ad Ambra, Bucine",
-              ratio: "aspect-[3/2]",
+              title: t.place.captions.exterior,
             },
-            { src: media.ANCIENT_PORTAL, alt: "Il portale d'ingresso del casale", ratio: "aspect-[3/4]" },
-            { src: media.COURTYARD, alt: "Il cortile del casale", ratio: "aspect-[3/2]" },
+            { src: media.COURTYARD, alt: "Il cortile del casale", title: t.place.captions.patio },
           ].map((im, i) => (
-            <Reveal key={im.alt} delay={(i % 3) * 90} className="mb-5 block break-inside-avoid">
-              <img
-                src={im.src}
-                alt={im.alt}
-                loading="lazy"
-                decoding="async"
-                className={`w-full object-cover ${im.ratio} transition-transform duration-[1200ms] ease-out hover:scale-[1.02]`}
-              />
+            <Reveal key={im.alt} delay={(i % 3) * 90}>
+              <PlateFrame src={im.src} alt={im.alt} title={im.title} ratio="aspect-[4/5]" />
             </Reveal>
           ))}
         </div>
+
       </div>
     </section>
   );
