@@ -158,7 +158,7 @@ export function Place() {
               ratio: "aspect-[3/2]",
             },
             { src: media.DINING_ROOM, alt: "La sala interna con il tavolo lungo", ratio: "aspect-[3/4]" },
-            { src: media.OUTDOOR_SPACE, alt: "Il casale immerso nel verde", ratio: "aspect-[4/5]" },
+            { src: media.HOT_BREAD, alt: "Il pane servito in sala", ratio: "aspect-[4/5]" },
             { src: media.COURTYARD, alt: "Il cortile del casale", ratio: "aspect-[4/3]" },
           ].map((im, i) => (
             <Reveal key={im.alt} delay={(i % 3) * 90} className="mb-5 block break-inside-avoid">
