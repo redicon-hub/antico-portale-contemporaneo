@@ -61,7 +61,8 @@ export const copy = {
         },
       ],
       captionMain: "Pasta fresca e ragù toscano, cotture lunghe.",
-      captionSide: "Colore, acidità, temperatura: il piatto letto come composizione.",
+      captionSide: "Colore, acidità, temperatura.",
+      captionWide: "Fritto, crema di zucca, senape: la Toscana in un'altra grammatica.",
     },
     bao: {
       eyebrow: "Contaminazione",
@@ -87,6 +88,7 @@ export const copy = {
         gourmet: "Corte breve, materia prima lunga",
         steak: "Carne alla brace",
         bread: "Lievitati della casa",
+        pasta: "Pasta fresca, fatta a mano",
       },
     },
     aperitivo: {
@@ -104,6 +106,8 @@ export const copy = {
         garden: "Il verde intorno al casale",
         outside: "Lo spazio esterno d'estate",
         inside: "Il tavolo lungo, per tavolate ed esperienze private",
+        portal: "Il portale, l'ingresso che dà il nome al ristorante",
+        exterior: "Il casale, nella luce del giorno",
       },
     },
     intl: {
@@ -197,7 +201,8 @@ export const copy = {
         { t: "Season", d: "A kitchen that shifts with availability, ripeness and instinct." },
       ],
       captionMain: "Fresh pasta and Tuscan ragù, long cooking.",
-      captionSide: "Colour, acidity, temperature: the plate read as composition.",
+      captionSide: "Colour, acidity, temperature.",
+      captionWide: "Fried, pumpkin cream, mustard: Tuscany in another grammar.",
     },
     bao: {
       eyebrow: "Crossing over",
@@ -223,6 +228,7 @@ export const copy = {
         gourmet: "Short plating, long sourcing",
         steak: "Grilled meat",
         bread: "House breads",
+        pasta: "Fresh pasta, made by hand",
       },
     },
     aperitivo: {
@@ -240,6 +246,8 @@ export const copy = {
         garden: "The green around the farmhouse",
         outside: "The outdoor space in summer",
         inside: "The long table, for large parties and private dining",
+        portal: "The portal, the entrance that names the restaurant",
+        exterior: "The farmhouse, in daylight",
       },
     },
     intl: {

@@ -1,6 +1,6 @@
 import { useLang } from "@/lib/i18n";
 import { media } from "@/lib/media";
-import { Caption, Reveal, ShootPlaceholder } from "@/components/site/primitives";
+import { Caption, Reveal, ShootPlaceholder, PlateFrame } from "@/components/site/primitives";
 
 export function Manifesto() {
   const { t } = useLang();
@@ -104,60 +104,73 @@ export function FourWomen() {
 export function Kitchen() {
   const { t } = useLang();
   return (
-    <section id="la-cucina" className="bg-background py-24 md:py-36">
+    <section id="la-cucina" className="bg-forest-deep py-24 text-ivory md:py-36">
       <div className="mx-auto max-w-[1500px] px-5 md:px-10">
-        <div className="grid gap-10 md:grid-cols-12">
-          <Reveal className="md:col-span-6">
-            <p className="eyebrow text-copper">{t.kitchen.eyebrow}</p>
-            <h2 className="display-lg mt-6 max-w-[16ch]">{t.kitchen.title}</h2>
-          </Reveal>
-          <Reveal delay={120} className="md:col-span-5 md:col-start-8 md:self-end">
-            <p className="lede text-muted-foreground">{t.kitchen.text}</p>
-          </Reveal>
-        </div>
+        <div className="grid gap-12 md:grid-cols-12 md:gap-14">
+          {/* Colonna sinistra: manifesto + indice numerato */}
+          <div className="md:col-span-4">
+            <div className="md:sticky md:top-28">
+              <Reveal>
+                <p className="eyebrow text-copper">{t.kitchen.eyebrow}</p>
+                <h2 className="display-md mt-6 max-w-[16ch]">{t.kitchen.title}</h2>
+                <p className="body-copy mt-7 max-w-[42ch] text-ivory/70">{t.kitchen.text}</p>
+              </Reveal>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-12 md:gap-10">
-          <Reveal className="md:col-span-7">
-            {/* HANDMADE_PASTA */}
-            <img
-              src={media.HANDMADE_PASTA}
-              alt="Piatto di pasta fresca con ragù toscano, cucina contemporanea nel Valdarno"
-              loading="lazy"
-              decoding="async"
-              width={1400}
-              height={1050}
-              className="aspect-[4/3] w-full object-cover"
-            />
-            <Caption>{t.kitchen.captionMain}</Caption>
-          </Reveal>
+              <div className="mt-10 border-t border-ivory/20">
+                {t.kitchen.pillars.map((p, i) => (
+                  <Reveal key={p.t} delay={i * 70}>
+                    <div className="flex gap-5 border-b border-ivory/20 py-5">
+                      <span className="eyebrow pt-1 text-ivory/40">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <div>
+                        <h3 className="font-display text-xl font-light">{p.t}</h3>
+                        <p className="mt-1.5 max-w-[34ch] text-sm font-light leading-relaxed text-ivory/60">
+                          {p.d}
+                        </p>
+                      </div>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+            </div>
+          </div>
 
-          <Reveal delay={120} className="md:col-span-4 md:col-start-9 md:pt-24">
-            {/* DISH_DETAIL_01 */}
-            <img
-              src={media.DISH_DETAIL_01}
-              alt="Dettaglio di un piatto dai colori intensi, ristorante gourmet in Valdarno"
-              loading="lazy"
-              decoding="async"
-              width={1000}
-              height={1250}
-              className="aspect-[4/5] w-full object-cover"
-            />
-            <Caption>{t.kitchen.captionSide}</Caption>
-          </Reveal>
-        </div>
-
-        <div className="mt-20 grid gap-px border-t border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
-          {t.kitchen.pillars.map((p, i) => (
-            <Reveal key={p.t} delay={i * 80} className="bg-background p-8">
-              <h3 className="font-display text-2xl font-light">{p.t}</h3>
-              <p className="mt-3 text-sm font-light leading-relaxed text-muted-foreground">{p.d}</p>
-            </Reveal>
-          ))}
+          {/* Colonna destra: trittico ad altezze uniformi */}
+          <div className="md:col-span-8">
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+              <Reveal>
+                <PlateFrame
+                  src={media.HANDMADE_PASTA}
+                  alt="Piatto di pasta fresca con ragù toscano, cucina contemporanea nel Valdarno"
+                  title={t.kitchen.captionMain}
+                  ratio="aspect-[4/5]"
+                />
+              </Reveal>
+              <Reveal delay={90}>
+                <PlateFrame
+                  src={media.DISH_DETAIL_01}
+                  alt="Dettaglio di un piatto dai colori intensi, ristorante gourmet in Valdarno"
+                  title={t.kitchen.captionSide}
+                  ratio="aspect-[4/5]"
+                />
+              </Reveal>
+              <Reveal delay={150} className="sm:col-span-2">
+                <PlateFrame
+                  src={media.DISH_DETAIL_02}
+                  alt="Composizione gourmet servita ad Antico Portale"
+                  title={t.kitchen.captionWide}
+                  ratio="aspect-[16/9]"
+                />
+              </Reveal>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
 }
+
 
 export function Bao() {
   const { t } = useLang();

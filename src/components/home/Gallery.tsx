@@ -1,6 +1,6 @@
 import { useLang } from "@/lib/i18n";
 import { media } from "@/lib/media";
-import { Reveal } from "@/components/site/primitives";
+import { Reveal, PlateFrame } from "@/components/site/primitives";
 
 export function MenuGallery() {
   const { t } = useLang();
@@ -31,31 +31,32 @@ export function MenuGallery() {
           </Reveal>
         </div>
 
-        {/* Masonry editoriale: riempie lo spazio senza vuoti */}
-        <div className="mt-16 columns-1 gap-5 sm:columns-2 lg:columns-3 [column-fill:_balance]">
+        {/* Griglia editoriale: altezze uniformi, titoli in sovraimpressione */}
+        <div className="mt-16 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {[
-            { src: media.DESSERT, alt: "Dessert contemporaneo di Antico Portale", ratio: "aspect-[4/5]" },
+            { src: media.DESSERT, alt: "Dessert contemporaneo di Antico Portale", title: t.menu.captions.dessert },
             {
               src: media.DISH_DETAIL_02,
               alt: "Piatto gourmet servito nel ristorante toscano del Valdarno",
-              ratio: "aspect-[3/2]",
+              title: t.menu.captions.gourmet,
             },
-            { src: media.DISH_FISH, alt: "Piatto di pesce, cucina toscana contemporanea", ratio: "aspect-[4/5]" },
-            { src: media.DISH_STEAK, alt: "Carne alla brace", ratio: "aspect-[3/2]" },
-            { src: media.HANDMADE_PASTA, alt: "Pasta fresca fatta a mano", ratio: "aspect-[4/5]" },
-            { src: media.BREAD_TABLE, alt: "Pane e lievitati della casa in tavola", ratio: "aspect-[3/2]" },
+            { src: media.DISH_FISH, alt: "Piatto di pesce, cucina toscana contemporanea", title: t.menu.captions.fish },
+            { src: media.DISH_STEAK, alt: "Carne alla brace", title: t.menu.captions.steak, position: "50% 55%" },
+            { src: media.HANDMADE_PASTA, alt: "Pasta fresca fatta a mano", title: t.menu.captions.pasta },
+            { src: media.BREAD_TABLE, alt: "Pane e lievitati della casa in tavola", title: t.menu.captions.bread },
           ].map((im, i) => (
-            <Reveal key={im.alt} delay={(i % 3) * 90} className="mb-5 block break-inside-avoid">
-              <img
+            <Reveal key={im.alt} delay={(i % 3) * 90}>
+              <PlateFrame
                 src={im.src}
                 alt={im.alt}
-                loading="lazy"
-                decoding="async"
-                className={`w-full object-cover ${im.ratio} transition-transform duration-[1200ms] ease-out hover:scale-[1.02]`}
+                title={im.title}
+                position={im.position ?? "center"}
+                ratio="aspect-[4/5]"
               />
             </Reveal>
           ))}
         </div>
+
       </div>
     </section>
   );
@@ -144,34 +145,29 @@ export function Place() {
           </Reveal>
         </div>
 
-        <div className="mt-16 columns-1 gap-5 sm:columns-2 lg:columns-3 [column-fill:_balance]">
+        <div className="mt-16 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {[
-            { src: media.WOODS_EXTERIOR, alt: "Il giardino e il verde intorno al casale", ratio: "aspect-[3/4]" },
+            { src: media.ANCIENT_PORTAL, alt: "Il portale d'ingresso del casale", title: t.place.captions.portal },
+            { src: media.DINING_ROOM, alt: "La sala interna con il tavolo lungo", title: t.place.captions.inside },
+            { src: media.WOODS_EXTERIOR, alt: "Il giardino e il verde intorno al casale", title: t.place.captions.garden },
             {
               src: media.OUTDOOR_SPACE,
               alt: "Lo spazio esterno del ristorante nel Valdarno",
-              ratio: "aspect-[3/2]",
+              title: t.place.captions.outside,
             },
-            { src: media.DINING_ROOM, alt: "La sala interna con il tavolo lungo", ratio: "aspect-[3/4]" },
             {
               src: media.EXTERIOR_DAY,
               alt: "Esterno del ristorante Antico Portale ad Ambra, Bucine",
-              ratio: "aspect-[3/2]",
+              title: t.place.captions.exterior,
             },
-            { src: media.ANCIENT_PORTAL, alt: "Il portale d'ingresso del casale", ratio: "aspect-[3/4]" },
-            { src: media.COURTYARD, alt: "Il cortile del casale", ratio: "aspect-[3/2]" },
+            { src: media.COURTYARD, alt: "Il cortile del casale", title: t.place.captions.patio },
           ].map((im, i) => (
-            <Reveal key={im.alt} delay={(i % 3) * 90} className="mb-5 block break-inside-avoid">
-              <img
-                src={im.src}
-                alt={im.alt}
-                loading="lazy"
-                decoding="async"
-                className={`w-full object-cover ${im.ratio} transition-transform duration-[1200ms] ease-out hover:scale-[1.02]`}
-              />
+            <Reveal key={im.alt} delay={(i % 3) * 90}>
+              <PlateFrame src={im.src} alt={im.alt} title={im.title} ratio="aspect-[4/5]" />
             </Reveal>
           ))}
         </div>
+
       </div>
     </section>
   );

@@ -79,3 +79,43 @@ export function Caption({ children }: { children: ReactNode }) {
     <p className="mt-3 text-[0.78rem] font-light tracking-wide text-muted-foreground">{children}</p>
   );
 }
+
+/** Immagine editoriale ad altezza uniforme con titolo in sovraimpressione. */
+export function PlateFrame({
+  src,
+  alt,
+  title,
+  ratio = "aspect-[4/5]",
+  position = "center",
+  className = "",
+}: {
+  src: string;
+  alt: string;
+  title: string;
+  ratio?: string;
+  position?: string;
+  className?: string;
+}) {
+  return (
+    <figure className={`group relative overflow-hidden ${ratio} ${className}`}>
+      <img
+        src={src}
+        alt={alt}
+        loading="lazy"
+        decoding="async"
+        style={{ objectPosition: position }}
+        className="h-full w-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.04]"
+      />
+      <span
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-[45%] bg-gradient-to-t from-ink/70 via-ink/25 to-transparent opacity-90 transition-opacity duration-700 group-hover:opacity-100"
+      />
+      <figcaption className="pointer-events-none absolute inset-x-0 bottom-0 p-5 md:p-6">
+        <span className="block h-px w-8 bg-ivory/60 transition-all duration-700 group-hover:w-14" />
+        <span className="mt-3 block font-display text-[1.05rem] font-light leading-snug tracking-wide text-ivory drop-shadow-[0_1px_12px_color-mix(in_oklab,var(--ink)_60%,transparent)] md:text-[1.2rem]">
+          {title}
+        </span>
+      </figcaption>
+    </figure>
+  );
+}
