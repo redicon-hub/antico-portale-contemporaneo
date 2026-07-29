@@ -87,6 +87,7 @@ export const copy = {
         gourmet: "Corte breve, materia prima lunga",
         steak: "Carne alla brace",
         bread: "Lievitati della casa",
+        pasta: "Pasta fresca, fatta a mano",
       },
     },
     aperitivo: {
@@ -104,6 +105,8 @@ export const copy = {
         garden: "Il verde intorno al casale",
         outside: "Lo spazio esterno d'estate",
         inside: "Il tavolo lungo, per tavolate ed esperienze private",
+        portal: "Il portale, l'ingresso che dà il nome al ristorante",
+        exterior: "Il casale, nella luce del giorno",
       },
     },
     intl: {
@@ -223,6 +226,7 @@ export const copy = {
         gourmet: "Short plating, long sourcing",
         steak: "Grilled meat",
         bread: "House breads",
+        pasta: "Fresh pasta, made by hand",
       },
     },
     aperitivo: {
@@ -240,6 +244,8 @@ export const copy = {
         garden: "The green around the farmhouse",
         outside: "The outdoor space in summer",
         inside: "The long table, for large parties and private dining",
+        portal: "The portal, the entrance that names the restaurant",
+        exterior: "The farmhouse, in daylight",
       },
     },
     intl: {
