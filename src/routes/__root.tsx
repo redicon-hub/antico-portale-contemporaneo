@@ -86,6 +86,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "Antico Portale" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Antico Portale — Ristorante toscano contemporaneo nel Valdarno" },
+      { name: "twitter:title", content: "Antico Portale — Ristorante toscano contemporaneo nel Valdarno" },
+      { property: "og:description", content: "Antico Portale: cucina toscana contemporanea nel Valdarno, tra Arezzo, Firenze e Siena." },
+      { name: "twitter:description", content: "Antico Portale: cucina toscana contemporanea nel Valdarno, tra Arezzo, Firenze e Siena." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/069220d8-e76b-44e6-81dd-887258576850/id-preview-371e7fd5--578f43ab-96a0-4f09-b270-d8a0dbc9768f.lovable.app-1785343099821.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/069220d8-e76b-44e6-81dd-887258576850/id-preview-371e7fd5--578f43ab-96a0-4f09-b270-d8a0dbc9768f.lovable.app-1785343099821.png" },
     ],
     links: [
       {
