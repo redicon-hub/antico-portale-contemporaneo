@@ -149,7 +149,7 @@ function MenuContent() {
 
           <div className="mt-24 grid gap-10 border-t border-border pt-12 md:grid-cols-12">
             <Reveal className="md:col-span-4">
-              <h2 className="display-sm">{t.menuPage.allergensTitle}</h2>
+              <h2 className="display-md">{t.menuPage.allergensTitle}</h2>
               <p className="mt-4 max-w-[40ch] text-[0.9rem] text-muted-foreground">
                 {t.menuPage.allergensNote}
               </p>
