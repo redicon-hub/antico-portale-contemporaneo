@@ -24,6 +24,7 @@ import michaela from "@/assets/michaela.jpg.asset.json";
 import maddalena from "@/assets/maddalena.jpg.asset.json";
 import simona from "@/assets/simona.jpg.asset.json";
 import ionela from "@/assets/ionela.jpg.asset.json";
+import chefRagu from "@/assets/chef-ragu.jpg.asset.json";
 
 /**
  * Mappa immagini → campi CMS.
