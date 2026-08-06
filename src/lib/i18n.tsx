@@ -88,7 +88,7 @@ export const copy = {
       captions: {
         dessert: "Dessert",
         fish: "Pesce",
-        gourmet: "Corte breve, materia prima lunga",
+        gourmet: "Fritto di cortile",
         steak: "Carne alla brace",
         bread: "Lievitati della casa",
         duck: "Petto d'anatra e cavolo",
@@ -259,7 +259,7 @@ export const copy = {
       captions: {
         dessert: "Dessert",
         fish: "Fish",
-        gourmet: "Short plating, long sourcing",
+        gourmet: "Farmyard fritto",
         steak: "Grilled meat",
         bread: "House breads",
         duck: "Duck breast and cabbage",
