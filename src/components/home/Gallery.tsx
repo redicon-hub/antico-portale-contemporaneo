@@ -41,9 +41,12 @@ export function MenuGallery() {
               alt: "Piatto gourmet servito nel ristorante toscano del Valdarno",
               title: t.menu.captions.gourmet,
             },
-            { src: media.DISH_FISH, alt: "Piatto di pesce, cucina toscana contemporanea", title: t.menu.captions.fish },
+            {
+              src: media.DUCK_BREAST,
+              alt: "Petto d'anatra con cavolo, cucina toscana contemporanea",
+              title: t.menu.captions.duck,
+            },
             { src: media.DISH_STEAK, alt: "Carne alla brace", title: t.menu.captions.steak, position: "50% 55%" },
-            { src: media.HANDMADE_PASTA, alt: "Pasta fresca fatta a mano", title: t.menu.captions.pasta },
             { src: media.BREAD_TABLE, alt: "Pane e lievitati della casa in tavola", title: t.menu.captions.bread },
           ].map((im, i) => (
             <Reveal key={im.alt} delay={(i % 3) * 90}>

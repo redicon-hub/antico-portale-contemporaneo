@@ -198,8 +198,8 @@ export function Kitchen() {
             <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
               <Reveal>
                 <PlateFrame
-                  src={media.HANDMADE_PASTA}
-                  alt="Piatto di pasta fresca con ragù toscano, cucina contemporanea nel Valdarno"
+                  src={media.DISH_FISH}
+                  alt="Piatto di pesce, cucina toscana contemporanea nel Valdambra"
                   title={t.kitchen.captionMain}
                   ratio="aspect-[4/5]"
                 />
