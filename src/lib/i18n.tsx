@@ -86,7 +86,7 @@ export const copy = {
       cta1: "Esplora il menu",
       cta2: "Consulta la carta dei vini",
       captions: {
-        dessert: "Dessert",
+        dessert: "Torta di mele fatta in casa ogni giorno, gelato alla vaniglia e crema calda",
         fish: "Pesce",
         gourmet: "Fritto di cortile",
         steak: "Carne alla brace",
@@ -257,7 +257,7 @@ export const copy = {
       cta1: "Explore the menu",
       cta2: "See the wine list",
       captions: {
-        dessert: "Dessert",
+        dessert: "Torta di mele fatta in casa ogni giorno, gelato alla vaniglia e crema calda",
         fish: "Fish",
         gourmet: "Farmyard fritto",
         steak: "Grilled meat",
