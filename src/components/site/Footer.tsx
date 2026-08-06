@@ -68,7 +68,7 @@ export function Footer() {
                 <span className="block text-[0.7rem] uppercase tracking-[0.14em] text-ivory/45">
                   {t.booking.hours}
                 </span>
-                <span className="mt-1 block">{t.booking.toFill}</span>
+                <span className="mt-1 block">{t.booking.hoursShort}</span>
               </li>
             </ul>
           </div>

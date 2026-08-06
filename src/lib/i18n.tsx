@@ -162,6 +162,7 @@ export const copy = {
       directionsCta: "Indicazioni stradali",
       call: "Chiama il ristorante",
       hoursTitle: "Orari di apertura",
+      hoursShort: "Mer–Dom 18:30–22:00 · Lun e Mar chiuso",
       closed: "Chiuso",
       days: {
         mon: "Lunedì",
@@ -332,6 +333,7 @@ export const copy = {
       directionsCta: "Get directions",
       call: "Call the restaurant",
       hoursTitle: "Opening hours",
+      hoursShort: "Wed–Sun 6:30–10 pm · Closed Mon & Tue",
       closed: "Closed",
       days: {
         mon: "Monday",
