@@ -161,6 +161,17 @@ export const copy = {
       directions: "Come raggiungerci",
       directionsCta: "Indicazioni stradali",
       call: "Chiama il ristorante",
+      hoursTitle: "Orari di apertura",
+      closed: "Chiuso",
+      days: {
+        mon: "Lunedì",
+        tue: "Martedì",
+        wed: "Mercoledì",
+        thu: "Giovedì",
+        fri: "Venerdì",
+        sat: "Sabato",
+        sun: "Domenica",
+      },
     },
     footer: {
       claim:
@@ -320,6 +331,17 @@ export const copy = {
       directions: "How to reach us",
       directionsCta: "Get directions",
       call: "Call the restaurant",
+      hoursTitle: "Opening hours",
+      closed: "Closed",
+      days: {
+        mon: "Monday",
+        tue: "Tuesday",
+        wed: "Wednesday",
+        thu: "Thursday",
+        fri: "Friday",
+        sat: "Saturday",
+        sun: "Sunday",
+      },
     },
     footer: {
       claim:
