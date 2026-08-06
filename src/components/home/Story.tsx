@@ -93,7 +93,7 @@ export function FourWomen() {
             alt="La brigata femminile del ristorante Antico Portale in Valdambra"
             loading="lazy"
             decoding="async"
-            className="aspect-[16/9] w-full object-cover object-center md:aspect-[21/9]"
+            className="aspect-[4/3] w-full object-cover object-[center_15%] md:aspect-[16/9]"
           />
         </Reveal>
 
