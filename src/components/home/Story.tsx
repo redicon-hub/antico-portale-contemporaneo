@@ -38,8 +38,40 @@ export function Manifesto() {
 }
 
 export function FourWomen() {
-  const { t } = useLang();
-  const fields = ["PORTRAIT_01", "PORTRAIT_02", "PORTRAIT_03", "PORTRAIT_04"];
+  const { t, lang } = useLang();
+
+  const members = [
+    {
+      src: media.PORTRAIT_MICHAELA,
+      name: "Michaela",
+      role: lang === "it" ? "Direttrice di sala" : "Dining room manager",
+      alt: "Michaela, direttrice di sala del ristorante Antico Portale in Valdambra",
+      bio:
+        lang === "it"
+          ? "Ritmo, accoglienza e precisione: governa la sala come una regia, perché ogni tavolo abbia il suo tempo."
+          : "Rhythm, warmth and precision: she directs the dining room so every table finds its own tempo.",
+    },
+    {
+      src: media.PORTRAIT_SIMONA,
+      name: "Simona",
+      role: lang === "it" ? "Sous chef" : "Sous chef",
+      alt: "Simona, sous chef del ristorante Antico Portale in Valdambra",
+      bio:
+        lang === "it"
+          ? "Tecnica toscana e mano ferma: tiene la linea, cura le cotture e traduce l'idea in piatto."
+          : "Tuscan technique and a steady hand: she holds the line and turns each idea into a plate.",
+    },
+    {
+      src: media.PORTRAIT_IONELA,
+      name: "Ionela",
+      role: lang === "it" ? "Accoglienza e bar" : "Welcome & bar",
+      alt: "Ionela, accoglienza e bartender del ristorante gourmet Antico Portale in Valdambra",
+      bio:
+        lang === "it"
+          ? "Il primo sguardo e l'ultimo sorso: firma l'accoglienza e la miscelazione dell'aperitivo."
+          : "The first welcome and the last sip: she signs the greeting and the aperitivo mixing.",
+    },
+  ];
 
   return (
     <section id="le-protagoniste" className="bg-forest-deep py-24 text-ivory md:py-36">
@@ -56,36 +88,56 @@ export function FourWomen() {
         </div>
 
         <Reveal delay={80} className="mt-16">
-          {/* TEAM_GROUP */}
-          <ShootPlaceholder
-            field="TEAM_GROUP"
-            label={t.women.placeholderGroup}
-            ratio="aspect-[16/9] md:aspect-[21/9]"
-            className="border-ivory/20 bg-ivory/[0.04] text-ivory"
+          <img
+            src={media.TEAM_GROUP}
+            alt="La brigata femminile del ristorante Antico Portale in Valdambra"
+            loading="lazy"
+            decoding="async"
+            className="aspect-[16/9] w-full object-cover object-center md:aspect-[21/9]"
           />
         </Reveal>
 
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {fields.map((f, i) => (
-            <Reveal key={f} delay={i * 90}>
+          {members.map((m, i) => (
+            <Reveal key={m.name} delay={i * 90}>
               <div className="group">
-                <ShootPlaceholder
-                  field={f}
-                  label={t.women.placeholderPortrait}
-                  ratio="aspect-[3/4]"
-                  className="border-ivory/20 bg-ivory/[0.04] transition-colors duration-700 group-hover:bg-ivory/[0.08]"
-                />
+                <div className="overflow-hidden">
+                  <img
+                    src={m.src}
+                    alt={m.alt}
+                    loading="lazy"
+                    decoding="async"
+                    className="aspect-[3/4] w-full object-cover object-top transition-transform duration-[1400ms] ease-out group-hover:scale-[1.04]"
+                  />
+                </div>
                 <div className="mt-4 border-t border-ivory/20 pt-4">
                   <h3 className="font-display text-xl font-light">
-                    Nome — <span className="text-ivory/55">{t.women.role}</span>
+                    {m.name} — <span className="text-ivory/55">{m.role}</span>
                   </h3>
-                  <p className="mt-2 text-sm font-light leading-relaxed text-ivory/55">
-                    {t.women.bioPlaceholder}
-                  </p>
+                  <p className="mt-2 text-sm font-light leading-relaxed text-ivory/55">{m.bio}</p>
                 </div>
               </div>
             </Reveal>
           ))}
+
+          <Reveal delay={270}>
+            <div className="group">
+              <ShootPlaceholder
+                field="PORTRAIT_CHEF"
+                label={t.women.placeholderPortrait}
+                ratio="aspect-[3/4]"
+                className="border-ivory/20 bg-ivory/[0.04] transition-colors duration-700 group-hover:bg-ivory/[0.08]"
+              />
+              <div className="mt-4 border-t border-ivory/20 pt-4">
+                <h3 className="font-display text-xl font-light">
+                  Chef — <span className="text-ivory/55">{t.women.role}</span>
+                </h3>
+                <p className="mt-2 text-sm font-light leading-relaxed text-ivory/55">
+                  {t.women.bioPlaceholder}
+                </p>
+              </div>
+            </div>
+          </Reveal>
         </div>
 
         <Reveal delay={120} className="mt-12">
