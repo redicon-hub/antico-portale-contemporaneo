@@ -16,7 +16,8 @@ export function Footer() {
             </p>
           </div>
 
-          <div className="md:col-span-3">
+          <div className="md:col-span-2">
+
             <h2 className="eyebrow text-ivory/55">{t.footer.nav}</h2>
             <ul className="mt-5 space-y-2.5 text-sm font-light">
               {Object.entries(t.nav).map(([k, v]) => (
