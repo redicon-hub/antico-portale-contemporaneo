@@ -130,7 +130,7 @@ export function FourWomen() {
               />
               <div className="mt-4 border-t border-ivory/20 pt-4">
                 <h3 className="font-display text-xl font-light">
-                  Chef — <span className="text-ivory/55">{t.women.role}</span>
+                  Maddalena — <span className="text-ivory/55">{lang === "it" ? "Chef" : "Head chef"}</span>
                 </h3>
                 <p className="mt-2 text-sm font-light leading-relaxed text-ivory/55">
                   {t.women.bioPlaceholder}
