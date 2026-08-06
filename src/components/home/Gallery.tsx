@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { useLang } from "@/lib/i18n";
 import { media } from "@/lib/media";
 import { Reveal, PlateFrame } from "@/components/site/primitives";
