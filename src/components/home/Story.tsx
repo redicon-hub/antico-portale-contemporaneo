@@ -59,7 +59,10 @@ export function FourWomen() {
         lang === "it"
           ? "Ritratto di Maddalena, chef — nuovo shooting"
           : "Portrait of Maddalena, head chef — new photo shoot",
-      bio: t.women.bioPlaceholder,
+      bio:
+        lang === "it"
+          ? "Cura personalmente la panificazione e il suo ragù toscano è leggenda: tempi lunghi, mani, memoria."
+          : "She looks after the bread personally, and her Tuscan ragù is legendary: long cooking, hands, memory.",
     },
     {
       src: media.PORTRAIT_SIMONA,
