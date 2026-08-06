@@ -52,6 +52,16 @@ export function FourWomen() {
           : "Rhythm, warmth and precision: she directs the dining room so every table finds its own tempo.",
     },
     {
+      src: null,
+      name: "Maddalena",
+      role: lang === "it" ? "Chef" : "Head chef",
+      alt:
+        lang === "it"
+          ? "Ritratto di Maddalena, chef — nuovo shooting"
+          : "Portrait of Maddalena, head chef — new photo shoot",
+      bio: t.women.bioPlaceholder,
+    },
+    {
       src: media.PORTRAIT_SIMONA,
       name: "Simona",
       role: lang === "it" ? "Sous chef" : "Sous chef",
@@ -72,6 +82,7 @@ export function FourWomen() {
           : "The first welcome and the last sip: she signs the greeting and the aperitivo mixing.",
     },
   ];
+
 
   return (
     <section id="le-protagoniste" className="bg-forest-deep py-24 text-ivory md:py-36">
