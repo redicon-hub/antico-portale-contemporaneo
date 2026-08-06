@@ -32,9 +32,23 @@ export function Footer() {
           <div className="md:col-span-2">
             <h2 className="eyebrow text-ivory/55">{t.footer.info}</h2>
             <ul className="mt-5 space-y-2.5 text-sm font-light text-ivory/80">
-              <li>{t.booking.address} — {t.booking.toFill}</li>
-              <li>{t.booking.phone} — {t.booking.toFill}</li>
-              <li>{t.booking.email} — {t.booking.toFill}</li>
+              <li>{contact.street}, {contact.locality}</li>
+              <li>{contact.postalCode} {contact.city} ({contact.province})</li>
+              <li>
+                <a href={contact.phoneHref} className="transition-opacity hover:opacity-65">
+                  {t.booking.phone} — {contact.phone}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={contact.whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-opacity hover:opacity-65"
+                >
+                  WhatsApp — {contact.whatsapp}
+                </a>
+              </li>
               <li>{t.booking.hours} — {t.booking.toFill}</li>
             </ul>
           </div>
@@ -43,16 +57,26 @@ export function Footer() {
             <h2 className="eyebrow text-ivory/55">{t.footer.follow}</h2>
             <ul className="mt-5 space-y-2.5 text-sm font-light">
               <li>
-                <a href="#contatti" className="transition-opacity hover:opacity-65">
-                  Instagram
+                <a
+                  href={contact.google.profile}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-opacity hover:opacity-65"
+                >
+                  Google
                 </a>
               </li>
               <li>
-                <a href="#contatti" className="transition-opacity hover:opacity-65">
-                  Facebook
+                <a
+                  href={contact.google.directions}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-opacity hover:opacity-65"
+                >
+                  {t.booking.directionsCta}
                 </a>
               </li>
-              <li className="text-ivory/45">LinkedIn — {t.intl.soon}</li>
+              <li className="text-ivory/45">Instagram — {t.intl.soon}</li>
             </ul>
             <a
               href="#contatti"
