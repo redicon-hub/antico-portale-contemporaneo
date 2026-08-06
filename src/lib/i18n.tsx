@@ -94,6 +94,16 @@ export const copy = {
         pasta: "Pasta fresca, fatta a mano",
       },
     },
+    menuPage: {
+      eyebrow: "Menu — agosto 2026",
+      title: "Il menu di agosto",
+      lede: "Il menu della stagione, riportato per intero. I piatti possono variare in base alla materia prima e alla disponibilità.",
+      back: "Torna alla homepage",
+      book: "Prenota un tavolo",
+      allergensTitle: "Allergeni",
+      allergensNote: "Segnalateci allergie o intolleranze: vi accompagneremo nella scelta.",
+      index: "Sezioni",
+    },
     aperitivo: {
       eyebrow: "Aperitivo e terrazza",
       title: "Il tempo di un aperitivo, prima che inizi la cena.",
