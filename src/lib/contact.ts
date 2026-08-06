@@ -17,6 +17,15 @@ export const contact = {
   whatsapp: "+39 393 632 8095",
   whatsappHref: "https://wa.me/393936328095",
   email: "",
+  hours: [
+    { key: "mon", open: null },
+    { key: "tue", open: null },
+    { key: "wed", open: "18:30 – 22:00" },
+    { key: "thu", open: "18:30 – 22:00" },
+    { key: "fri", open: "18:30 – 22:00" },
+    { key: "sat", open: "18:30 – 22:00" },
+    { key: "sun", open: "18:30 – 22:00" },
+  ] as { key: "mon" | "tue" | "wed" | "thu" | "fri" | "sat" | "sun"; open: string | null }[],
   google: {
     profile: "https://share.google/Fz6VLFcLhrzBH1Kfp",
     reviews: "https://share.google/Fz6VLFcLhrzBH1Kfp",

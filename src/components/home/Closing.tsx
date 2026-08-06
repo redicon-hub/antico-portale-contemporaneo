@@ -1,3 +1,4 @@
+import { Clock, MapPin, MessageCircle, Phone } from "lucide-react";
 import { useLang } from "@/lib/i18n";
 import { contact } from "@/lib/contact";
 import { Reveal } from "@/components/site/primitives";
@@ -100,21 +101,31 @@ export function Reviews() {
 
 export function Booking() {
   const { t } = useLang();
-  const rows = [
-    { label: t.booking.hours, value: t.booking.toFill },
-    { label: t.booking.address, value: contact.addressLine },
-    { label: t.booking.phone, value: contact.phone, href: contact.phoneHref },
-    { label: t.booking.wa, value: contact.whatsapp, href: contact.whatsappHref },
+
+  const channels = [
     {
-      label: t.booking.directions,
-      value: t.booking.directionsCta,
+      icon: Phone,
+      label: t.booking.phone,
+      value: contact.phone,
+      href: contact.phoneHref,
+    },
+    {
+      icon: MessageCircle,
+      label: t.booking.wa,
+      value: contact.whatsapp,
+      href: contact.whatsappHref,
+    },
+    {
+      icon: MapPin,
+      label: t.booking.address,
+      value: contact.addressLine,
       href: contact.google.directions,
     },
   ];
 
   return (
     <section id="contatti" className="bg-ink py-24 text-ivory md:py-36">
-      <div className="mx-auto grid max-w-[1500px] gap-12 px-5 md:grid-cols-12 md:px-10">
+      <div className="mx-auto grid max-w-[1500px] gap-14 px-5 md:grid-cols-12 md:px-10">
         <div className="md:col-span-6">
           <Reveal>
             <p className="eyebrow text-copper">{t.booking.eyebrow}</p>
@@ -125,48 +136,79 @@ export function Booking() {
           <Reveal delay={140}>
             <p className="lede mt-8 max-w-[42ch] text-ivory/75">{t.booking.text}</p>
           </Reveal>
+
           <Reveal delay={200}>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <a
-                href={contact.phoneHref}
-                className="border border-ivory bg-ivory px-8 py-4 text-[0.78rem] tracking-[0.14em] text-ink transition-colors duration-500 hover:bg-transparent hover:text-ivory"
-              >
-                {t.booking.call} — {contact.phone}
-              </a>
-              <a
-                href={contact.whatsappHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border border-ivory/50 px-8 py-4 text-[0.78rem] tracking-[0.14em] transition-colors duration-500 hover:border-ivory"
-              >
-                {t.booking.wa} — {contact.whatsapp}
-              </a>
-            </div>
+            <ul className="mt-12 space-y-3">
+              {channels.map((c) => (
+                <li key={c.label}>
+                  <a
+                    href={c.href}
+                    target={c.href.startsWith("http") ? "_blank" : undefined}
+                    rel="noopener noreferrer"
+                    className="group flex items-center gap-5 border border-ivory/15 px-6 py-5 transition-colors duration-500 hover:border-ivory/50 hover:bg-ivory/5"
+                  >
+                    <c.icon
+                      size={26}
+                      strokeWidth={1.2}
+                      className="shrink-0 text-copper"
+                      aria-hidden
+                    />
+                    <span className="min-w-0">
+                      <span className="block text-[0.7rem] uppercase tracking-[0.16em] text-ivory/45">
+                        {c.label}
+                      </span>
+                      <span className="mt-1.5 block text-lg font-light leading-snug md:text-xl">
+                        {c.value}
+                      </span>
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
           </Reveal>
         </div>
 
         <Reveal delay={120} className="md:col-span-5 md:col-start-8">
-          <dl className="divide-y divide-ivory/15 border-y border-ivory/15">
-            {rows.map((r) => (
-              <div key={r.label} className="flex items-baseline justify-between gap-6 py-4">
-                <dt className="eyebrow text-ivory/50">{r.label}</dt>
-                <dd className="text-right text-sm font-light text-ivory/70">
-                  {r.href ? (
-                    <a
-                      href={r.href}
-                      target={r.href.startsWith("http") ? "_blank" : undefined}
-                      rel="noopener noreferrer"
-                      className="border-b border-ivory/30 pb-0.5 transition-opacity hover:opacity-70"
-                    >
-                      {r.value}
-                    </a>
-                  ) : (
-                    r.value
-                  )}
-                </dd>
-              </div>
-            ))}
-          </dl>
+          <div className="border border-ivory/15 px-6 py-8 md:px-9 md:py-10">
+            <div className="flex items-center gap-4">
+              <Clock size={24} strokeWidth={1.2} className="text-copper" aria-hidden />
+              <h3 className="text-xl font-light tracking-wide md:text-2xl">
+                {t.booking.hoursTitle}
+              </h3>
+            </div>
+
+            <dl className="mt-8 divide-y divide-ivory/12">
+              {contact.hours.map((h) => (
+                <div
+                  key={h.key}
+                  className="flex items-baseline justify-between gap-6 py-4"
+                >
+                  <dt className="text-base font-light text-ivory/70 md:text-lg">
+                    {t.booking.days[h.key]}
+                  </dt>
+                  <dd
+                    className={
+                      h.open
+                        ? "text-base tabular-nums md:text-lg"
+                        : "text-base tracking-[0.08em] text-ivory/40 md:text-lg"
+                    }
+                  >
+                    {h.open ?? t.booking.closed}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+
+            <a
+              href={contact.google.directions}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center gap-3 border-b border-ivory/30 pb-1 text-sm tracking-[0.12em] transition-opacity hover:opacity-70"
+            >
+              <MapPin size={18} strokeWidth={1.2} aria-hidden />
+              {t.booking.directionsCta}
+            </a>
+          </div>
         </Reveal>
       </div>
     </section>
