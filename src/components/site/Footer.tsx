@@ -29,29 +29,49 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="md:col-span-2">
+          <div className="md:col-span-3">
             <h2 className="eyebrow text-ivory/55">{t.footer.info}</h2>
-            <ul className="mt-5 space-y-2.5 text-sm font-light text-ivory/80">
-              <li>{contact.street}, {contact.locality}</li>
-              <li>{contact.postalCode} {contact.city} ({contact.province})</li>
+            <ul className="mt-5 space-y-4 text-sm font-light text-ivory/80">
               <li>
-                <a href={contact.phoneHref} className="transition-opacity hover:opacity-65">
-                  {t.booking.phone} — {contact.phone}
+                <span className="block text-[0.7rem] uppercase tracking-[0.14em] text-ivory/45">
+                  {t.booking.address}
+                </span>
+                <span className="mt-1 block">{contact.street}, {contact.locality}</span>
+                <span className="block">{contact.postalCode} {contact.city} ({contact.province})</span>
+              </li>
+              <li>
+                <span className="block text-[0.7rem] uppercase tracking-[0.14em] text-ivory/45">
+                  {t.booking.phone}
+                </span>
+                <a
+                  href={contact.phoneHref}
+                  className="mt-1 block whitespace-nowrap transition-opacity hover:opacity-65"
+                >
+                  {contact.phone}
                 </a>
               </li>
               <li>
+                <span className="block text-[0.7rem] uppercase tracking-[0.14em] text-ivory/45">
+                  WhatsApp
+                </span>
                 <a
                   href={contact.whatsappHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="transition-opacity hover:opacity-65"
+                  className="mt-1 block whitespace-nowrap transition-opacity hover:opacity-65"
                 >
-                  WhatsApp — {contact.whatsapp}
+                  {contact.whatsapp}
                 </a>
               </li>
-              <li>{t.booking.hours} — {t.booking.toFill}</li>
+              <li>
+                <span className="block text-[0.7rem] uppercase tracking-[0.14em] text-ivory/45">
+                  {t.booking.hours}
+                </span>
+                <span className="mt-1 block">{t.booking.toFill}</span>
+              </li>
             </ul>
           </div>
+
 
           <div className="md:col-span-2">
             <h2 className="eyebrow text-ivory/55">{t.footer.follow}</h2>
