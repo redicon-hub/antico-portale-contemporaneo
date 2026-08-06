@@ -52,6 +52,16 @@ export function FourWomen() {
           : "Rhythm, warmth and precision: she directs the dining room so every table finds its own tempo.",
     },
     {
+      src: null,
+      name: "Maddalena",
+      role: lang === "it" ? "Chef" : "Head chef",
+      alt:
+        lang === "it"
+          ? "Ritratto di Maddalena, chef — nuovo shooting"
+          : "Portrait of Maddalena, head chef — new photo shoot",
+      bio: t.women.bioPlaceholder,
+    },
+    {
       src: media.PORTRAIT_SIMONA,
       name: "Simona",
       role: lang === "it" ? "Sous chef" : "Sous chef",
@@ -72,6 +82,7 @@ export function FourWomen() {
           : "The first welcome and the last sip: she signs the greeting and the aperitivo mixing.",
     },
   ];
+
 
   return (
     <section id="le-protagoniste" className="bg-forest-deep py-24 text-ivory md:py-36">
@@ -101,15 +112,24 @@ export function FourWomen() {
           {members.map((m, i) => (
             <Reveal key={m.name} delay={i * 90}>
               <div className="group">
-                <div className="overflow-hidden">
-                  <img
-                    src={m.src}
-                    alt={m.alt}
-                    loading="lazy"
-                    decoding="async"
-                    className="aspect-[3/4] w-full object-cover object-top transition-transform duration-[1400ms] ease-out group-hover:scale-[1.04]"
+                {m.src ? (
+                  <div className="overflow-hidden">
+                    <img
+                      src={m.src}
+                      alt={m.alt}
+                      loading="lazy"
+                      decoding="async"
+                      className="aspect-[3/4] w-full object-cover object-top transition-transform duration-[1400ms] ease-out group-hover:scale-[1.04]"
+                    />
+                  </div>
+                ) : (
+                  <ShootPlaceholder
+                    field="PORTRAIT_CHEF"
+                    label={m.alt}
+                    ratio="aspect-[3/4]"
+                    className="border-ivory/20 bg-ivory/[0.04] transition-colors duration-700 group-hover:bg-ivory/[0.08]"
                   />
-                </div>
+                )}
                 <div className="mt-4 border-t border-ivory/20 pt-4">
                   <h3 className="font-display text-xl font-light">
                     {m.name} — <span className="text-ivory/55">{m.role}</span>
@@ -119,26 +139,8 @@ export function FourWomen() {
               </div>
             </Reveal>
           ))}
-
-          <Reveal delay={270}>
-            <div className="group">
-              <ShootPlaceholder
-                field="PORTRAIT_CHEF"
-                label={lang === "it" ? "Ritratto di Maddalena, chef — nuovo shooting" : "Portrait of Maddalena, head chef — new photo shoot"}
-                ratio="aspect-[3/4]"
-                className="border-ivory/20 bg-ivory/[0.04] transition-colors duration-700 group-hover:bg-ivory/[0.08]"
-              />
-              <div className="mt-4 border-t border-ivory/20 pt-4">
-                <h3 className="font-display text-xl font-light">
-                  Maddalena — <span className="text-ivory/55">{lang === "it" ? "Chef" : "Head chef"}</span>
-                </h3>
-                <p className="mt-2 text-sm font-light leading-relaxed text-ivory/55">
-                  {t.women.bioPlaceholder}
-                </p>
-              </div>
-            </div>
-          </Reveal>
         </div>
+
 
         <Reveal delay={120} className="mt-12">
           <a
