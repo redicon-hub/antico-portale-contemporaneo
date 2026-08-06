@@ -52,6 +52,10 @@ export const media = {
   OUTDOOR_SPACE: esternoSpazio.url,
   EXTERIOR_DAY: locationEsterna.url,
   DINING_ROOM: salaInterna.url,
+  TEAM_GROUP: brigataTeam.url,
+  PORTRAIT_MICHAELA: michaela.url,
+  PORTRAIT_SIMONA: simona.url,
+  PORTRAIT_IONELA: ionela.url,
 } as const;
 
 /** Campi predisposti per il nuovo shooting — attualmente segnaposto editoriali. */
