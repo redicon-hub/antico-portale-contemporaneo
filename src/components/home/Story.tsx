@@ -282,17 +282,32 @@ export function Bao() {
 export function ChefRagu() {
   const { t } = useLang();
   return (
-    <section className="bg-wine py-24 text-ivory md:py-36">
-      <div className="mx-auto grid max-w-[1500px] items-center gap-12 px-5 md:grid-cols-12 md:px-10">
-        <div className="md:col-span-6">
+    <section className="bg-wine py-24 text-ivory md:py-32">
+      <div className="mx-auto grid max-w-[1500px] items-center gap-12 px-5 md:grid-cols-12 md:gap-16 md:px-10">
+        <Reveal className="md:col-span-6 lg:col-span-5">
+          <div className="overflow-hidden">
+            <img
+              src={media.CHEF_RAGU}
+              alt="Maddalena, chef di Antico Portale, con il suo ragù toscano"
+              loading="lazy"
+              decoding="async"
+              width={1122}
+              height={1402}
+              className="aspect-[4/5] w-full object-cover object-[center_30%]"
+            />
+          </div>
+          <Caption>{t.chef.eyebrow}</Caption>
+        </Reveal>
+
+        <div className="md:col-span-6 lg:col-span-6 lg:col-start-7">
           <Reveal>
             <p className="eyebrow text-ivory/60">{t.chef.eyebrow}</p>
           </Reveal>
           <Reveal delay={80}>
-            <h2 className="display-lg mt-6 max-w-[12ch]">{t.chef.title}</h2>
+            <h2 className="display-lg mt-6 max-w-[14ch]">{t.chef.title}</h2>
           </Reveal>
           <Reveal delay={160}>
-            <p className="lede mt-8 max-w-[44ch] text-ivory/80">{t.chef.text}</p>
+            <p className="lede mt-8 max-w-[46ch] text-ivory/80">{t.chef.text}</p>
           </Reveal>
           <Reveal delay={220}>
             <a
@@ -303,15 +318,6 @@ export function ChefRagu() {
             </a>
           </Reveal>
         </div>
-        <Reveal delay={120} className="md:col-span-5 md:col-start-8">
-          <img
-            src={media.CHEF_RAGU}
-            alt="Maddalena, chef di Antico Portale, con il suo ragù toscano"
-            loading="lazy"
-            decoding="async"
-            className="aspect-[4/5] w-full object-cover object-center"
-          />
-        </Reveal>
       </div>
     </section>
   );
