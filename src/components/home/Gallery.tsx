@@ -58,6 +58,15 @@ export function MenuGallery() {
           ))}
         </div>
 
+        <Reveal className="mt-14 flex justify-center">
+          <Link
+            to="/menu"
+            className="group inline-flex items-center gap-4 border border-forest-deep/30 px-9 py-4 text-[0.8rem] tracking-[0.14em] transition-colors duration-500 hover:border-forest-deep"
+          >
+            {t.menu.cta1}
+            <span aria-hidden className="h-px w-8 bg-forest-deep transition-all duration-500 group-hover:w-12" />
+          </Link>
+        </Reveal>
       </div>
     </section>
   );
