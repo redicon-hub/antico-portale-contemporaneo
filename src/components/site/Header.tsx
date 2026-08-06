@@ -3,13 +3,13 @@ import { useLang } from "@/lib/i18n";
 import { media } from "@/lib/media";
 
 const sections = [
-  { key: "restaurant", href: "#il-ristorante" },
-  { key: "kitchen", href: "#la-cucina" },
-  { key: "women", href: "#le-protagoniste" },
-  { key: "menu", href: "#menu" },
-  { key: "experiences", href: "#esperienze" },
-  { key: "place", href: "#il-luogo" },
-  { key: "contact", href: "#contatti" },
+  { key: "restaurant", href: "/#il-ristorante" },
+  { key: "kitchen", href: "/#la-cucina" },
+  { key: "women", href: "/#le-protagoniste" },
+  { key: "menu", href: "/menu" },
+  { key: "experiences", href: "/#esperienze" },
+  { key: "place", href: "/#il-luogo" },
+  { key: "contact", href: "/#contatti" },
 ] as const;
 
 /** Segno grafico ricostruito, ispirato al portale. Sostituibile con logo SVG definitivo. */
@@ -71,7 +71,7 @@ export function Header() {
         }`}
       >
         <div className="mx-auto flex max-w-[1500px] items-center justify-between gap-6 px-5 md:px-10">
-          <a href="#top" aria-label="Antico Portale — home" className="shrink-0">
+          <a href="/#top" aria-label="Antico Portale — home" className="shrink-0">
             <Wordmark />
           </a>
 
@@ -96,7 +96,7 @@ export function Header() {
               {t.langLabel}
             </button>
             <a
-              href="#contatti"
+              href="/#contatti"
               className={`hidden border px-5 py-2.5 text-[0.78rem] tracking-[0.12em] transition-colors duration-500 sm:inline-block ${
                 solid
                   ? "border-forest-deep bg-forest-deep text-ivory hover:bg-transparent hover:text-forest-deep"
@@ -163,7 +163,7 @@ export function Header() {
           </nav>
           <div className="px-5 pb-8">
             <a
-              href="#contatti"
+              href="/#contatti"
               onClick={() => setOpen(false)}
               className="block border border-ivory py-4 text-center text-[0.8rem] tracking-[0.14em]"
             >
@@ -175,7 +175,7 @@ export function Header() {
 
       {/* CTA mobile fissa, discreta */}
       <a
-        href="#contatti"
+        href="/#contatti"
         className="fixed bottom-4 left-1/2 z-40 -translate-x-1/2 border border-forest-deep/25 bg-background/95 px-6 py-3 text-[0.75rem] tracking-[0.14em] text-forest-deep shadow-sm backdrop-blur sm:hidden"
       >
         {t.book}

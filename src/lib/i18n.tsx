@@ -94,6 +94,16 @@ export const copy = {
         pasta: "Pasta fresca, fatta a mano",
       },
     },
+    menuPage: {
+      eyebrow: "Menu — agosto 2026",
+      title: "Il menu di agosto",
+      lede: "Il menu della stagione, riportato per intero. I piatti possono variare in base alla materia prima e alla disponibilità.",
+      back: "Torna alla homepage",
+      book: "Prenota un tavolo",
+      allergensTitle: "Allergeni",
+      allergensNote: "Segnalateci allergie o intolleranze: vi accompagneremo nella scelta.",
+      index: "Sezioni",
+    },
     aperitivo: {
       eyebrow: "Aperitivo e terrazza",
       title: "Il tempo di un aperitivo, prima che inizi la cena.",
@@ -236,6 +246,16 @@ export const copy = {
         bread: "House breads",
         pasta: "Fresh pasta, made by hand",
       },
+    },
+    menuPage: {
+      eyebrow: "Menu — August 2026",
+      title: "The August menu",
+      lede: "A seasonal menu, printed here in full. Dishes may change with produce and availability.",
+      back: "Back to the homepage",
+      book: "Book a table",
+      allergensTitle: "Allergens",
+      allergensNote: "Please let us know about any allergies or intolerances: we will guide you through the menu.",
+      index: "Sections",
     },
     aperitivo: {
       eyebrow: "Aperitivo and terrace",
