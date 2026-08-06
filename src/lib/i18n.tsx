@@ -67,10 +67,10 @@ export const copy = {
     bao: {
       eyebrow: "Contaminazione",
       title: "La Toscana può cambiare forma senza perdere la propria voce.",
-      caption1: "Bao toscano, prima portata",
-      caption2: "Il ripieno: memoria toscana, forma nuova",
-      note: "Una tecnica lontana, un impasto morbido, un ripieno che sa di casa.",
-      text: "Ci sono piatti che partono da una tecnica lontana e ritrovano il proprio carattere attraverso ingredienti, sapori e memorie toscane. Il bao di Antico Portale nasce da questo incontro: non una provocazione, ma un modo diverso di raccontare il territorio.",
+      caption1: "Bao toscano contemporaneo",
+      caption2: "Ingredienti toscani, accostamenti arditi",
+      note: "Pane di ispirazione cinese, ingredienti toscani, visione contemporanea.",
+      text: "Sono bao toscani contemporanei: pane di ispirazione cinese, ingredienti toscani, visione contemporanea e accostamenti arditi. Non una provocazione, ma un modo diverso di raccontare il territorio.",
     },
     chef: {
       eyebrow: "La chef",
