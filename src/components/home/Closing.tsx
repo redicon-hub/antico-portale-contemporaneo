@@ -1,4 +1,5 @@
 import { useLang } from "@/lib/i18n";
+import { contact } from "@/lib/contact";
 import { Reveal } from "@/components/site/primitives";
 
 export function International() {
@@ -32,7 +33,7 @@ export function International() {
 export function Reviews() {
   const { t } = useLang();
   return (
-    <section className="bg-background py-24 md:py-32">
+    <section id="recensioni" className="bg-background py-24 md:py-32">
       <div className="mx-auto max-w-[1500px] px-5 md:px-10">
         <div className="grid gap-10 md:grid-cols-12">
           <Reveal className="md:col-span-5">
@@ -41,27 +42,57 @@ export function Reviews() {
           </Reveal>
           <Reveal delay={120} className="md:col-span-5 md:col-start-8 md:self-end">
             <p className="body-copy text-muted-foreground">{t.reviews.text}</p>
-            <a
-              href="#contatti"
-              className="mt-6 inline-block border-b border-forest-deep pb-1 text-[0.8rem] tracking-[0.12em] transition-opacity hover:opacity-65"
-            >
-              {t.reviews.cta}
-            </a>
+            <div className="mt-7 flex flex-wrap gap-4">
+              <a
+                href={contact.google.reviews}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border border-forest-deep px-6 py-3 text-[0.78rem] tracking-[0.12em] transition-colors duration-500 hover:bg-forest-deep hover:text-ivory"
+              >
+                {t.reviews.cta}
+              </a>
+              <a
+                href={contact.google.profile}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-b border-forest-deep pb-1 text-[0.78rem] tracking-[0.12em] transition-opacity hover:opacity-65"
+              >
+                {t.reviews.write}
+              </a>
+            </div>
           </Reveal>
         </div>
 
-        <div className="mt-14 grid gap-px border-t border-border bg-border md:grid-cols-3">
-          {[0, 1, 2].map((i) => (
-            <Reveal key={i} delay={i * 90} className="flex flex-col justify-between bg-background p-8">
+        <Reveal delay={160} className="mt-14 border border-border">
+          <div className="grid md:grid-cols-3">
+            <div className="border-b border-border p-8 md:border-b-0 md:border-r">
+              <p className="eyebrow text-muted-foreground/70">{t.reviews.badge}</p>
+              <p className="mt-4 font-display text-3xl font-light">Google</p>
+              <p className="mt-2 text-[0.8rem] tracking-[0.12em] text-copper">★★★★★</p>
+            </div>
+            <div className="border-b border-border p-8 md:border-b-0 md:border-r">
+              <p className="eyebrow text-muted-foreground/70">{t.reviews.profile}</p>
+              <p className="mt-4 font-display text-xl font-light leading-snug">
+                {contact.name}
+                <br />
+                <span className="text-muted-foreground">{contact.addressLine}</span>
+              </p>
+            </div>
+            <div className="flex flex-col justify-between p-8">
               <p className="font-display text-xl font-light leading-snug text-muted-foreground">
-                “{t.reviews.placeholder}”
+                {t.reviews.placeholder}
               </p>
-              <p className="eyebrow mt-10 text-muted-foreground/70">
+              <a
+                href={contact.google.reviews}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="eyebrow mt-10 border-b border-forest-deep pb-1 self-start transition-opacity hover:opacity-65"
+              >
                 {t.reviews.source} — Google
-              </p>
-            </Reveal>
-          ))}
-        </div>
+              </a>
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
@@ -71,10 +102,14 @@ export function Booking() {
   const { t } = useLang();
   const rows = [
     { label: t.booking.hours, value: t.booking.toFill },
-    { label: t.booking.address, value: t.booking.toFill },
-    { label: t.booking.phone, value: t.booking.toFill },
-    { label: t.booking.email, value: t.booking.toFill },
-    { label: t.booking.directions, value: t.booking.toFill },
+    { label: t.booking.address, value: contact.addressLine },
+    { label: t.booking.phone, value: contact.phone, href: contact.phoneHref },
+    { label: t.booking.wa, value: contact.whatsapp, href: contact.whatsappHref },
+    {
+      label: t.booking.directions,
+      value: t.booking.directionsCta,
+      href: contact.google.directions,
+    },
   ];
 
   return (
@@ -93,16 +128,18 @@ export function Booking() {
           <Reveal delay={200}>
             <div className="mt-10 flex flex-wrap gap-4">
               <a
-                href="#contatti"
+                href={contact.phoneHref}
                 className="border border-ivory bg-ivory px-8 py-4 text-[0.78rem] tracking-[0.14em] text-ink transition-colors duration-500 hover:bg-transparent hover:text-ivory"
               >
-                {t.book}
+                {t.booking.call} — {contact.phone}
               </a>
               <a
-                href="#contatti"
+                href={contact.whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="border border-ivory/50 px-8 py-4 text-[0.78rem] tracking-[0.14em] transition-colors duration-500 hover:border-ivory"
               >
-                {t.booking.wa}
+                {t.booking.wa} — {contact.whatsapp}
               </a>
             </div>
           </Reveal>
@@ -113,7 +150,20 @@ export function Booking() {
             {rows.map((r) => (
               <div key={r.label} className="flex items-baseline justify-between gap-6 py-4">
                 <dt className="eyebrow text-ivory/50">{r.label}</dt>
-                <dd className="text-sm font-light text-ivory/70">{r.value}</dd>
+                <dd className="text-right text-sm font-light text-ivory/70">
+                  {r.href ? (
+                    <a
+                      href={r.href}
+                      target={r.href.startsWith("http") ? "_blank" : undefined}
+                      rel="noopener noreferrer"
+                      className="border-b border-ivory/30 pb-0.5 transition-opacity hover:opacity-70"
+                    >
+                      {r.value}
+                    </a>
+                  ) : (
+                    r.value
+                  )}
+                </dd>
               </div>
             ))}
           </dl>
@@ -122,3 +172,4 @@ export function Booking() {
     </section>
   );
 }
+
