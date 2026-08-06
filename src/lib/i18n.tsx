@@ -139,15 +139,18 @@ export const copy = {
     reviews: {
       eyebrow: "Reputazione",
       title: "Quello che resta agli ospiti",
-      text: "Le recensioni vengono lette direttamente dalle piattaforme sulle quali gli ospiti scrivono. Nessun estratto è redazionale.",
+      text: "Le recensioni sono pubblicate dagli ospiti sulla nostra scheda Google. Nessun estratto è redazionale: si leggono e si scrivono direttamente lì.",
       placeholder: "Estratto recensione — collegamento dinamico a Google Reviews",
-      cta: "Leggi tutte le recensioni",
+      cta: "Leggi le recensioni su Google",
+      write: "Scrivi una recensione",
+      profile: "Scheda Google del ristorante",
       source: "Fonte",
+      badge: "Recensioni verificate",
     },
     booking: {
       eyebrow: "Prenotazioni",
       title: "Il vostro tavolo, oltre il portale",
-      text: "Per una cena speciale, una tappa durante il viaggio o il desiderio di tornare a una cucina che lascia il segno.",
+      text: "Per una cena speciale, una tappa durante il viaggio o il desiderio di tornare a una cucina che lascia il segno. Prenotate per telefono o su WhatsApp.",
       hours: "Giorni e orari",
       address: "Indirizzo",
       contacts: "Contatti",
@@ -156,6 +159,8 @@ export const copy = {
       phone: "Telefono",
       email: "Email",
       directions: "Come raggiungerci",
+      directionsCta: "Indicazioni stradali",
+      call: "Chiama il ristorante",
     },
     footer: {
       claim:
@@ -293,15 +298,18 @@ export const copy = {
     reviews: {
       eyebrow: "Reputation",
       title: "What stays with our guests",
-      text: "Reviews are read directly from the platforms where guests write them. No excerpt is written in-house.",
+      text: "Reviews are published by guests on our Google listing. No excerpt is written in-house: read and write them straight there.",
       placeholder: "Review excerpt — dynamic Google Reviews connection",
-      cta: "Read all reviews",
+      cta: "Read the reviews on Google",
+      write: "Write a review",
+      profile: "Google business profile",
       source: "Source",
+      badge: "Verified reviews",
     },
     booking: {
       eyebrow: "Reservations",
       title: "Your table, beyond the portal",
-      text: "For a special dinner, a stop along the journey, or the wish to return to a kitchen that leaves a mark.",
+      text: "For a special dinner, a stop along the journey, or the wish to return to a kitchen that leaves a mark. Book by phone or on WhatsApp.",
       hours: "Days and hours",
       address: "Address",
       contacts: "Contact",
@@ -310,6 +318,8 @@ export const copy = {
       phone: "Phone",
       email: "Email",
       directions: "How to reach us",
+      directionsCta: "Get directions",
+      call: "Call the restaurant",
     },
     footer: {
       claim:
