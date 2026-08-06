@@ -16,14 +16,14 @@ export function MenuGallery() {
           <Reveal delay={120} className="md:col-span-5 md:col-start-8 md:self-end">
             <p className="lede text-muted-foreground">{t.menu.text}</p>
             <div className="mt-8 flex flex-wrap gap-4">
-              <a
-                href="#menu"
+              <Link
+                to="/menu"
                 className="border border-forest-deep bg-forest-deep px-7 py-3.5 text-[0.78rem] tracking-[0.14em] text-ivory transition-colors duration-500 hover:bg-transparent hover:text-forest-deep"
               >
                 {t.menu.cta1}
-              </a>
+              </Link>
               <a
-                href="#menu"
+                href="#contatti"
                 className="border border-forest-deep/40 px-7 py-3.5 text-[0.78rem] tracking-[0.14em] transition-colors duration-500 hover:border-forest-deep"
               >
                 {t.menu.cta2}
