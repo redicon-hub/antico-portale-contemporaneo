@@ -34,7 +34,7 @@ export const media = {
   ANCIENT_PORTAL: heroPortale.url,
   HOT_BREAD: paneMani.url,
   BREAD_TABLE: pane.url,
-  HANDMADE_PASTA: piattoPrincipale.url,
+  DUCK_BREAST: piattoPrincipale.url,
   TUSCAN_BAO: bao1.url,
   TUSCAN_BAO_ALT: bao2.url,
   DISH_DETAIL_01: risotto.url,
