@@ -158,7 +158,8 @@ export const copy = {
       directions: "Come raggiungerci",
     },
     footer: {
-      claim: "Cucina toscana contemporanea, nel cuore del Valdarno.",
+      claim:
+        "Cucina toscana contemporanea, nel cuore della Valdambra. Un antico portale toscano tra Siena, Arezzo e Firenze.",
       nav: "Navigazione",
       info: "Informazioni",
       follow: "Social",
@@ -311,7 +312,8 @@ export const copy = {
       directions: "How to reach us",
     },
     footer: {
-      claim: "Contemporary Tuscan cuisine, in the heart of the Valdarno.",
+      claim:
+        "Contemporary Tuscan cuisine, in the heart of the Valdambra. An ancient Tuscan portal between Siena, Arezzo and Florence.",
       nav: "Navigation",
       info: "Information",
       follow: "Social",
