@@ -19,6 +19,10 @@ import terrazza1 from "@/assets/terrazza-1.jpg.asset.json";
 import terrazza2 from "@/assets/terrazza-2.jpg.asset.json";
 import drink from "@/assets/drink.png.asset.json";
 import aperitivoTerrazza from "@/assets/aperitivo-terrazza.jpg.asset.json";
+import brigataTeam from "@/assets/brigata-team.jpg.asset.json";
+import michaela from "@/assets/michaela.jpg.asset.json";
+import simona from "@/assets/simona.jpg.asset.json";
+import ionela from "@/assets/ionela.jpg.asset.json";
 
 /**
  * Mappa immagini → campi CMS.
@@ -48,6 +52,10 @@ export const media = {
   OUTDOOR_SPACE: esternoSpazio.url,
   EXTERIOR_DAY: locationEsterna.url,
   DINING_ROOM: salaInterna.url,
+  TEAM_GROUP: brigataTeam.url,
+  PORTRAIT_MICHAELA: michaela.url,
+  PORTRAIT_SIMONA: simona.url,
+  PORTRAIT_IONELA: ionela.url,
 } as const;
 
 /** Campi predisposti per il nuovo shooting — attualmente segnaposto editoriali. */
