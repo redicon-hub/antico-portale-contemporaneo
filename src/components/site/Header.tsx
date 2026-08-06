@@ -3,13 +3,13 @@ import { useLang } from "@/lib/i18n";
 import { media } from "@/lib/media";
 
 const sections = [
-  { key: "restaurant", href: "#il-ristorante" },
-  { key: "kitchen", href: "#la-cucina" },
-  { key: "women", href: "#le-protagoniste" },
+  { key: "restaurant", href: "/#il-ristorante" },
+  { key: "kitchen", href: "/#la-cucina" },
+  { key: "women", href: "/#le-protagoniste" },
   { key: "menu", href: "/menu" },
-  { key: "experiences", href: "#esperienze" },
-  { key: "place", href: "#il-luogo" },
-  { key: "contact", href: "#contatti" },
+  { key: "experiences", href: "/#esperienze" },
+  { key: "place", href: "/#il-luogo" },
+  { key: "contact", href: "/#contatti" },
 ] as const;
 
 /** Segno grafico ricostruito, ispirato al portale. Sostituibile con logo SVG definitivo. */
