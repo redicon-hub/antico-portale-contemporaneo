@@ -59,6 +59,7 @@ export const media = {
   PORTRAIT_MADDALENA: maddalena.url,
   PORTRAIT_SIMONA: simona.url,
   PORTRAIT_IONELA: ionela.url,
+  CHEF_RAGU: chefRagu.url,
 } as const;
 
 /** Campi predisposti per il nuovo shooting — attualmente segnaposto editoriali. */
