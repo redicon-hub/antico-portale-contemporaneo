@@ -22,8 +22,8 @@ export const copy = {
     hero: {
       place: "Valdambra, Toscana — tra Arezzo, Firenze e Siena",
       title1: "La Toscana che non ti aspetti.",
-      title2: "Nel cuore del Valdarno.",
-      text: "Antico Portale è una cucina toscana contemporanea fatta di studio, memoria, carattere e libertà. Un ristorante immerso nel paesaggio del Valdarno, guidato da quattro donne e da un'idea precisa di ospitalità.",
+      title2: "Nel cuore della Valdambra.",
+      text: "Antico Portale è una cucina toscana contemporanea fatta di studio, memoria, carattere e libertà. Un ristorante immerso nel paesaggio della Valdambra, guidato da quattro donne e da un'idea precisa di ospitalità.",
       cta1: "Scopri la nostra cucina",
       scroll: "Scorri",
     },
@@ -171,8 +171,8 @@ export const copy = {
     hero: {
       place: "Valdambra, Tuscany — between Arezzo, Florence and Siena",
       title1: "The Tuscany you don't expect.",
-      title2: "In the heart of the Valdarno.",
-      text: "Antico Portale is contemporary Tuscan cooking built on study, memory, character and freedom. A restaurant set in the Valdarno landscape, run by four women with a precise idea of hospitality.",
+      title2: "In the heart of the Valdambra.",
+      text: "Antico Portale is contemporary Tuscan cooking built on study, memory, character and freedom. A restaurant set in the Valdambra landscape, run by four women with a precise idea of hospitality.",
       cta1: "Discover our cooking",
       scroll: "Scroll",
     },
