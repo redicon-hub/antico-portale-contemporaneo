@@ -46,7 +46,7 @@ export function MenuGallery() {
               alt: "Petto d'anatra con cavolo, cucina toscana contemporanea",
               title: t.menu.captions.duck,
             },
-            { src: media.DISH_STEAK, alt: "Carne alla brace", title: t.menu.captions.steak, position: "50% 55%" },
+            { src: media.DISH_STEAK, alt: "Carne alla brace", title: t.menu.captions.steak, position: "50% 60%" },
             { src: media.BREAD_TABLE, alt: "Pane e lievitati della casa in tavola", title: t.menu.captions.bread },
           ].map((im, i) => (
             <Reveal
