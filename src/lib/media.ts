@@ -55,6 +55,7 @@ export const media = {
   DINING_ROOM: salaInterna.url,
   TEAM_GROUP: brigataTeam.url,
   PORTRAIT_MICHAELA: michaela.url,
+  PORTRAIT_MADDALENA: maddalena.url,
   PORTRAIT_SIMONA: simona.url,
   PORTRAIT_IONELA: ionela.url,
 } as const;
