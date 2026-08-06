@@ -77,7 +77,7 @@ export const copy = {
       title: "Il ragù non guarda il passaporto.",
       text: "Guarda il tempo, la tecnica, gli ingredienti e il rispetto. Per cucinarlo davvero bene non basta ereditarne la ricetta: bisogna comprenderla, provarla, sbagliarla e rifarla. Per anni.",
       cta: "Conosci la nostra storia",
-      placeholder: "Ritratto della chef con pasta fresca — nuovo shooting",
+      placeholder: "Ritratto di Maddalena, chef, con pasta fresca — nuovo shooting",
     },
     menu: {
       eyebrow: "Piatti e menu",
@@ -220,7 +220,7 @@ export const copy = {
       title: "Ragù doesn't check your passport.",
       text: "It looks at time, technique, ingredients and respect. To cook it properly, inheriting the recipe is not enough: you have to understand it, try it, get it wrong and do it again. For years.",
       cta: "Read our story",
-      placeholder: "Chef portrait with fresh pasta — new photo shoot",
+      placeholder: "Portrait of Maddalena, head chef, with fresh pasta — new photo shoot",
     },
     menu: {
       eyebrow: "Dishes and menu",

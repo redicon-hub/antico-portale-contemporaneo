@@ -124,13 +124,13 @@ export function FourWomen() {
             <div className="group">
               <ShootPlaceholder
                 field="PORTRAIT_CHEF"
-                label={t.women.placeholderPortrait}
+                label={lang === "it" ? "Ritratto di Maddalena, chef — nuovo shooting" : "Portrait of Maddalena, head chef — new photo shoot"}
                 ratio="aspect-[3/4]"
                 className="border-ivory/20 bg-ivory/[0.04] transition-colors duration-700 group-hover:bg-ivory/[0.08]"
               />
               <div className="mt-4 border-t border-ivory/20 pt-4">
                 <h3 className="font-display text-xl font-light">
-                  Chef — <span className="text-ivory/55">{t.women.role}</span>
+                  Maddalena — <span className="text-ivory/55">{lang === "it" ? "Chef" : "Head chef"}</span>
                 </h3>
                 <p className="mt-2 text-sm font-light leading-relaxed text-ivory/55">
                   {t.women.bioPlaceholder}
