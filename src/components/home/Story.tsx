@@ -52,13 +52,13 @@ export function FourWomen() {
           : "Rhythm, warmth and precision: she directs the dining room so every table finds its own tempo.",
     },
     {
-      src: null,
+      src: media.PORTRAIT_MADDALENA,
       name: "Maddalena",
       role: lang === "it" ? "Chef" : "Head chef",
       alt:
         lang === "it"
-          ? "Ritratto di Maddalena, chef — nuovo shooting"
-          : "Portrait of Maddalena, head chef — new photo shoot",
+          ? "Maddalena, chef del ristorante Antico Portale in Valdambra"
+          : "Maddalena, head chef of Antico Portale restaurant in Valdambra",
       bio:
         lang === "it"
           ? "Cura personalmente la panificazione e il suo ragù toscano è leggenda: tempi lunghi, mani, memoria."

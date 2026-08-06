@@ -21,6 +21,7 @@ import drink from "@/assets/drink.png.asset.json";
 import aperitivoTerrazza from "@/assets/aperitivo-terrazza.jpg.asset.json";
 import brigataTeam from "@/assets/brigata-team.jpg.asset.json";
 import michaela from "@/assets/michaela.jpg.asset.json";
+import maddalena from "@/assets/maddalena.jpg.asset.json";
 import simona from "@/assets/simona.jpg.asset.json";
 import ionela from "@/assets/ionela.jpg.asset.json";
 
@@ -54,6 +55,7 @@ export const media = {
   DINING_ROOM: salaInterna.url,
   TEAM_GROUP: brigataTeam.url,
   PORTRAIT_MICHAELA: michaela.url,
+  PORTRAIT_MADDALENA: maddalena.url,
   PORTRAIT_SIMONA: simona.url,
   PORTRAIT_IONELA: ionela.url,
 } as const;
