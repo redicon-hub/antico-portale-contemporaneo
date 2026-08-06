@@ -1,4 +1,5 @@
 import { useLang } from "@/lib/i18n";
+import { contact } from "@/lib/contact";
 import { Wordmark } from "./Header";
 
 export function Footer() {
