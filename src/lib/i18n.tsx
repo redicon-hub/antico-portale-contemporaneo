@@ -237,6 +237,16 @@ export const copy = {
         pasta: "Fresh pasta, made by hand",
       },
     },
+    menuPage: {
+      eyebrow: "Menu — August 2026",
+      title: "The August menu",
+      lede: "A seasonal menu, printed here in full. Dishes may change with produce and availability.",
+      back: "Back to the homepage",
+      book: "Book a table",
+      allergensTitle: "Allergens",
+      allergensNote: "Please let us know about any allergies or intolerances: we will guide you through the menu.",
+      index: "Sections",
+    },
     aperitivo: {
       eyebrow: "Aperitivo and terrace",
       title: "The time of one aperitivo, before dinner begins.",
