@@ -33,7 +33,7 @@ export function MenuGallery() {
         </div>
 
         {/* Griglia editoriale: altezze uniformi, titoli in sovraimpressione */}
-        <div className="mt-16 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-6">
           {[
             { src: media.DESSERT, alt: "Dessert contemporaneo di Antico Portale", title: t.menu.captions.dessert },
             {
@@ -49,13 +49,17 @@ export function MenuGallery() {
             { src: media.DISH_STEAK, alt: "Carne alla brace", title: t.menu.captions.steak, position: "50% 55%" },
             { src: media.BREAD_TABLE, alt: "Pane e lievitati della casa in tavola", title: t.menu.captions.bread },
           ].map((im, i) => (
-            <Reveal key={im.alt} delay={(i % 3) * 90}>
+            <Reveal
+              key={im.alt}
+              delay={(i % 3) * 90}
+              className={i < 3 ? "lg:col-span-2" : "lg:col-span-3"}
+            >
               <PlateFrame
                 src={im.src}
                 alt={im.alt}
                 title={im.title}
                 position={im.position ?? "center"}
-                ratio="aspect-[4/5]"
+                ratio={i < 3 ? "aspect-[4/5]" : "aspect-[3/2]"}
               />
             </Reveal>
           ))}
