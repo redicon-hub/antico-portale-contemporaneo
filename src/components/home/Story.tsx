@@ -304,12 +304,12 @@ export function ChefRagu() {
           </Reveal>
         </div>
         <Reveal delay={120} className="md:col-span-5 md:col-start-8">
-          {/* CHEF_RAGU */}
-          <ShootPlaceholder
-            field="CHEF_RAGU"
-            label={t.chef.placeholder}
-            ratio="aspect-[4/5]"
-            className="border-ivory/25 bg-ivory/[0.05] text-ivory"
+          <img
+            src={media.CHEF_RAGU}
+            alt="Maddalena, chef di Antico Portale, con il suo ragù toscano"
+            loading="lazy"
+            decoding="async"
+            className="aspect-[4/5] w-full object-cover object-center"
           />
         </Reveal>
       </div>
