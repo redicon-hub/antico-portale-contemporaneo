@@ -1,3 +1,4 @@
+import { Clock, MapPin, MessageCircle, Phone } from "lucide-react";
 import { useLang } from "@/lib/i18n";
 import { contact } from "@/lib/contact";
 import { Reveal } from "@/components/site/primitives";
