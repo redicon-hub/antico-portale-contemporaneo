@@ -5,7 +5,7 @@ import { Footer } from "@/components/site/Footer";
 import { Hero } from "@/components/home/Hero";
 import { Manifesto, FourWomen, Kitchen, Bao, ChefRagu } from "@/components/home/Story";
 import { MenuGallery, Aperitivo, Place } from "@/components/home/Gallery";
-import { International, Reviews, Booking } from "@/components/home/Closing";
+import { Reviews, Booking } from "@/components/home/Closing";
 
 const title = "Antico Portale — Ristorante toscano nel Valdarno, cucina contemporanea";
 const description =
@@ -76,7 +76,6 @@ function Home() {
         <MenuGallery />
         <Aperitivo />
         <Place />
-        <International />
         <Reviews />
         <Booking />
       </main>
