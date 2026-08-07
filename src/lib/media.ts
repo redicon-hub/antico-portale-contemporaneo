@@ -20,10 +20,10 @@ import terrazza2 from "@/assets/terrazza-2.jpg.asset.json";
 import drink from "@/assets/drink.png.asset.json";
 import aperitivoTerrazza from "@/assets/aperitivo-terrazza.jpg.asset.json";
 import brigataTeam from "@/assets/brigata-team.jpg.asset.json";
-import michaela from "@/assets/michaela.jpg.asset.json";
-import maddalena from "@/assets/maddalena.jpg.asset.json";
-import simona from "@/assets/simona.jpg.asset.json";
-import ionela from "@/assets/ionela.jpg.asset.json";
+import michaela from "@/assets/michaela-v2.jpg.asset.json";
+import maddalena from "@/assets/maddalena-v2.jpg.asset.json";
+import simona from "@/assets/simona-v2.jpg.asset.json";
+import ionela from "@/assets/ionela-v2.jpg.asset.json";
 import chefRagu from "@/assets/chef-ragu-v2.jpg.asset.json";
 
 /**
