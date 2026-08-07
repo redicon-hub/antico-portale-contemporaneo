@@ -67,7 +67,7 @@ export const copy = {
     bao: {
       eyebrow: "Contaminazione",
       title: "La Toscana può cambiare forma senza perdere la propria voce.",
-      caption1: "Bao toscano contemporaneo",
+      caption1: "Bao di pesce",
       caption2: "Ingredienti toscani, accostamenti arditi",
       note: "Pane di ispirazione cinese, ingredienti toscani, visione contemporanea.",
       text: "Sono bao toscani contemporanei: pane di ispirazione cinese, ingredienti toscani, visione contemporanea e accostamenti arditi. Non una provocazione, ma un modo diverso di raccontare il territorio.",
