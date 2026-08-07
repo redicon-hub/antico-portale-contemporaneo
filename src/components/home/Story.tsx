@@ -43,9 +43,9 @@ export function FourWomen() {
   const members = [
     {
       src: media.PORTRAIT_MICHAELA,
-      name: "Michaela",
+      name: "Michela",
       role: lang === "it" ? "Direttrice di sala" : "Dining room manager",
-      alt: "Michaela, direttrice di sala del ristorante Antico Portale in Valdambra",
+      alt: "Michela, direttrice di sala del ristorante Antico Portale in Valdambra",
       bio:
         lang === "it"
           ? "Ritmo, accoglienza e precisione: governa la sala come una regia, perché ogni tavolo abbia il suo tempo."
