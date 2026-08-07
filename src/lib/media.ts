@@ -19,12 +19,12 @@ import terrazza1 from "@/assets/terrazza-1.jpg.asset.json";
 import terrazza2 from "@/assets/terrazza-2.jpg.asset.json";
 import drink from "@/assets/drink.png.asset.json";
 import aperitivoTerrazza from "@/assets/aperitivo-terrazza.jpg.asset.json";
-import brigataTeam from "@/assets/brigata-team.jpg.asset.json";
+import brigataTeam from "@/assets/brigata-team-v2.jpg.asset.json";
 import michaela from "@/assets/michaela-v3.jpg.asset.json";
 import maddalena from "@/assets/maddalena-v2.jpg.asset.json";
 import simona from "@/assets/simona-v3.jpg.asset.json";
 import ionela from "@/assets/ionela-v3.jpg.asset.json";
-import chefRagu from "@/assets/chef-ragu-v2.jpg.asset.json";
+import chefRagu from "@/assets/chef-ragu-v3.jpg.asset.json";
 
 /**
  * Mappa immagini → campi CMS.
