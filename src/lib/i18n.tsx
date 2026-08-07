@@ -238,7 +238,7 @@ export const copy = {
     bao: {
       eyebrow: "Crossing over",
       title: "Tuscany can change shape without losing its voice.",
-      caption1: "Contemporary Tuscan bao",
+      caption1: "Fish bao",
       caption2: "Tuscan ingredients, bold pairings",
       note: "Chinese-inspired bread, Tuscan ingredients, a contemporary vision.",
       text: "These are contemporary Tuscan bao: Chinese-inspired bread, Tuscan ingredients, a contemporary vision and bold pairings. Not a provocation, but another way of telling this land.",
