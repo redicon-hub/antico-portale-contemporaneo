@@ -203,7 +203,8 @@ export const copy = {
     hero: {
       place: "Valdambra, Tuscany — between Arezzo, Florence and Siena",
       title1: "The Tuscany you don't expect.",
-      title2: "In the heart of the Valdambra.",
+      title2: "The best restaurant in the Valdambra, at the edge of the Valdarno.",
+      subtitle: "Gourmet restaurant in the province of Arezzo: contemporary Tuscan cuisine between Valdambra and Valdarno.",
       text: "Antico Portale is contemporary Tuscan cooking built on study, memory, character and freedom. A restaurant set in the Valdambra landscape, run by four women with a precise idea of hospitality.",
       cta1: "Discover our cooking",
       scroll: "Scroll",
