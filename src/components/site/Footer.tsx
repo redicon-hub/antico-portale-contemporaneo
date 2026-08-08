@@ -111,8 +111,8 @@ export function Footer() {
         <div className="mt-16 flex flex-col gap-4 border-t border-ivory/15 pt-6 text-[0.75rem] font-light text-ivory/60 md:flex-row md:items-center md:justify-between">
           <div className="flex flex-wrap gap-x-6 gap-y-2">
             {t.footer.legal.map((l) => (
-              <a key={l} href="#contatti" className="transition-opacity hover:opacity-70">
-                {l}
+              <a key={l.href} href={l.href} className="transition-opacity hover:opacity-70">
+                {l.label}
               </a>
             ))}
             <span>{t.footer.company}</span>
