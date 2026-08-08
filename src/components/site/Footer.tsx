@@ -1,5 +1,8 @@
 import { useLang } from "@/lib/i18n";
 import { contact } from "@/lib/contact";
+import { cookieCopy } from "@/lib/cookie-copy";
+import { openCookiePreferences } from "@/lib/cookie-consent";
+import { CookieConsent } from "./CookieConsent";
 import { Wordmark } from "./Header";
 
 export function Footer() {
@@ -115,9 +118,16 @@ export function Footer() {
                 {l.label}
               </a>
             ))}
+            <button
+              onClick={openCookiePreferences}
+              className="text-left transition-opacity hover:opacity-70"
+            >
+              {cookieCopy[lang].manage}
+            </button>
             <span>{t.footer.company}</span>
           </div>
           <div className="flex items-center gap-4">
+
             <button
               onClick={() => setLang("it")}
               className={lang === "it" ? "text-ivory" : "transition-opacity hover:opacity-80"}
@@ -134,6 +144,8 @@ export function Footer() {
           </div>
         </div>
       </div>
+      <CookieConsent />
     </footer>
   );
 }
+
