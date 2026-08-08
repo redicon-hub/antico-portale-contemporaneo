@@ -1,5 +1,8 @@
 import { useLang } from "@/lib/i18n";
 import { contact } from "@/lib/contact";
+import { cookieCopy } from "@/lib/cookie-copy";
+import { openCookiePreferences } from "@/lib/cookie-consent";
+import { CookieConsent } from "./CookieConsent";
 import { Wordmark } from "./Header";
 
 export function Footer() {
