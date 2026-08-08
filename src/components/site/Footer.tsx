@@ -118,9 +118,16 @@ export function Footer() {
                 {l.label}
               </a>
             ))}
+            <button
+              onClick={openCookiePreferences}
+              className="text-left transition-opacity hover:opacity-70"
+            >
+              {cookieCopy[lang].manage}
+            </button>
             <span>{t.footer.company}</span>
           </div>
           <div className="flex items-center gap-4">
+
             <button
               onClick={() => setLang("it")}
               className={lang === "it" ? "text-ivory" : "transition-opacity hover:opacity-80"}
