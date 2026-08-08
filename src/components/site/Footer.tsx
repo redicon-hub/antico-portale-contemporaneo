@@ -144,6 +144,8 @@ export function Footer() {
           </div>
         </div>
       </div>
+      <CookieConsent />
     </footer>
   );
 }
+
