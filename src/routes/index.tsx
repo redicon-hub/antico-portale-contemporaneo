@@ -124,7 +124,9 @@ function Home() {
         <Aperitivo />
         <Place />
         <Reviews />
+        <Faq />
         <Booking />
+
       </main>
       <Footer />
     </LangProvider>
