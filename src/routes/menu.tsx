@@ -6,9 +6,11 @@ import { Reveal } from "@/components/site/primitives";
 import { media } from "@/lib/media";
 import { menuSections, menuIntro, allergensList, menuNotes } from "@/lib/menu-data";
 
-const title = "Menu — Antico Portale, ristorante toscano contemporaneo nel Valdambra";
+const SITE = "https://www.anticoportalevaldambra.com";
+
+const title = "Menu | Antico Portale, ristorante gourmet in Valdambra (Arezzo)";
 const description =
-  "Il menu completo di Antico Portale: antipasti, primi di pasta fresca, secondi alla brace, contorni e dolci. Cucina toscana contemporanea nel Valdarno, tra Arezzo, Firenze e Siena.";
+  "Il menu stagionale di Antico Portale: antipasti, pasta fresca, secondi alla brace e dolci. Cucina toscana contemporanea in Valdambra, tra Valdarno, Arezzo, Firenze e Siena.";
 
 export const Route = createFileRoute("/menu")({
   head: () => ({
@@ -18,9 +20,12 @@ export const Route = createFileRoute("/menu")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "article" },
+      { property: "og:url", content: `${SITE}/menu` },
+      { property: "og:locale", content: "it_IT" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/menu" }],
+    links: [{ rel: "canonical", href: `${SITE}/menu` }],
+
     scripts: [
       {
         type: "application/ld+json",
@@ -41,7 +46,19 @@ export const Route = createFileRoute("/menu")({
           })),
         }),
       },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
+            { "@type": "ListItem", position: 2, name: "Menu", item: `${SITE}/menu` },
+          ],
+        }),
+      },
     ],
+
   }),
   component: MenuPage,
 });

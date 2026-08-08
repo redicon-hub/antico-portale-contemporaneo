@@ -1,8 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import type {} from "@tanstack/react-start";
 
-// TODO: sostituire con l'URL del progetto quando sarà definito il dominio.
-const BASE_URL = "";
+const BASE_URL = "https://www.anticoportalevaldambra.com";
 
 interface SitemapEntry {
   path: string;
@@ -17,6 +16,8 @@ export const Route = createFileRoute("/sitemap.xml")({
         const entries: SitemapEntry[] = [
           { path: "/", changefreq: "weekly", priority: "1.0" },
           { path: "/menu", changefreq: "monthly", priority: "0.9" },
+          { path: "/privacy", changefreq: "yearly", priority: "0.2" },
+          { path: "/cookie-policy", changefreq: "yearly", priority: "0.2" },
         ];
 
         const urls = entries.map((e) =>
