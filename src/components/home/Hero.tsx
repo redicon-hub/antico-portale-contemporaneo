@@ -31,10 +31,9 @@ export function Hero() {
 
       <div className="relative mx-auto flex min-h-[92svh] max-w-[1500px] flex-col justify-end px-5 pb-20 pt-32 text-ivory md:px-10 md:pb-24">
         <p className="eyebrow text-ivory/75">{t.hero.place}</p>
-        <h1 className="display-xl mt-5 max-w-[18ch]">
+        <h1 className="display-xl mt-5 max-w-[20ch]">
           {t.hero.title1}
-          <br />
-          <span className="text-ivory/85">{t.hero.title2}</span>
+          <span className="mt-3 block text-[0.5em] leading-[1.25] text-ivory/80">{t.hero.title2}</span>
         </h1>
         <h2 className="mt-6 max-w-[46ch] font-sans text-[0.82rem] uppercase leading-relaxed tracking-[0.16em] text-ivory/70">
           {t.hero.subtitle}
