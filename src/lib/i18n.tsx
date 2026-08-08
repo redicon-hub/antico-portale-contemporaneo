@@ -180,7 +180,10 @@ export const copy = {
       nav: "Navigazione",
       info: "Informazioni",
       follow: "Social",
-      legal: ["Privacy policy", "Cookie policy", "Preferenze cookie"],
+      legal: [
+        { label: "Privacy policy", href: "/privacy" },
+        { label: "Cookie policy", href: "/cookie-policy" },
+      ],
       company: "Dati societari — da completare",
     },
   },
@@ -351,7 +354,10 @@ export const copy = {
       nav: "Navigation",
       info: "Information",
       follow: "Social",
-      legal: ["Privacy policy", "Cookie policy", "Cookie preferences"],
+      legal: [
+        { label: "Privacy policy", href: "/privacy" },
+        { label: "Cookie policy", href: "/cookie-policy" },
+      ],
       company: "Company details — to be completed",
     },
   },
