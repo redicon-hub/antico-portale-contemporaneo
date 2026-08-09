@@ -226,7 +226,7 @@ export const menuSections: MenuSection[] = [
         it: "Hamburger di Chianina",
         en: "Chianina beef burger",
         descIt: "con il suo panino, pomodoro, insalata, cetriolini, pecorino e pancetta croccante",
-        descEn: "in a bun with tomato, lettuce, pickles, pecorino e pancetta croccante",
+        descEn: "in a bun with tomato, lettuce, pickles, pecorino and crispy pancetta",
         price: "14",
         allergens: [1, 7],
       },
