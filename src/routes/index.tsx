@@ -72,7 +72,7 @@ export const Route = createFileRoute("/")({
               acceptsReservations: true,
               currenciesAccepted: "EUR",
               telephone: contact.phone,
-              hasMenu: `${SITE}/menu`,
+              hasMenu: `${SITE}/menu-ristorante-gourmet-arezzo`,
               address: {
                 "@type": "PostalAddress",
                 streetAddress: contact.street,

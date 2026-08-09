@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as MenuRistoranteGourmetArezzoRouteImport } from './routes/menu-ristorante-gourmet-arezzo'
 import { Route as MenuRouteImport } from './routes/menu'
 import { Route as CookiePolicyRouteImport } from './routes/cookie-policy'
 import { Route as IndexRouteImport } from './routes/index'
@@ -25,6 +26,12 @@ const PrivacyRoute = PrivacyRouteImport.update({
   path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MenuRistoranteGourmetArezzoRoute =
+  MenuRistoranteGourmetArezzoRouteImport.update({
+    id: '/menu-ristorante-gourmet-arezzo',
+    path: '/menu-ristorante-gourmet-arezzo',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const MenuRoute = MenuRouteImport.update({
   id: '/menu',
   path: '/menu',
@@ -45,6 +52,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/menu': typeof MenuRoute
+  '/menu-ristorante-gourmet-arezzo': typeof MenuRistoranteGourmetArezzoRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
@@ -52,6 +60,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/menu': typeof MenuRoute
+  '/menu-ristorante-gourmet-arezzo': typeof MenuRistoranteGourmetArezzoRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
@@ -60,19 +69,33 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/menu': typeof MenuRoute
+  '/menu-ristorante-gourmet-arezzo': typeof MenuRistoranteGourmetArezzoRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/cookie-policy' | '/menu' | '/privacy' | '/sitemap.xml'
+  fullPaths:
+    | '/'
+    | '/cookie-policy'
+    | '/menu'
+    | '/menu-ristorante-gourmet-arezzo'
+    | '/privacy'
+    | '/sitemap.xml'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/cookie-policy' | '/menu' | '/privacy' | '/sitemap.xml'
+  to:
+    | '/'
+    | '/cookie-policy'
+    | '/menu'
+    | '/menu-ristorante-gourmet-arezzo'
+    | '/privacy'
+    | '/sitemap.xml'
   id:
     | '__root__'
     | '/'
     | '/cookie-policy'
     | '/menu'
+    | '/menu-ristorante-gourmet-arezzo'
     | '/privacy'
     | '/sitemap.xml'
   fileRoutesById: FileRoutesById
@@ -81,6 +104,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CookiePolicyRoute: typeof CookiePolicyRoute
   MenuRoute: typeof MenuRoute
+  MenuRistoranteGourmetArezzoRoute: typeof MenuRistoranteGourmetArezzoRoute
   PrivacyRoute: typeof PrivacyRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
 }
@@ -99,6 +123,13 @@ declare module '@tanstack/react-router' {
       path: '/privacy'
       fullPath: '/privacy'
       preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/menu-ristorante-gourmet-arezzo': {
+      id: '/menu-ristorante-gourmet-arezzo'
+      path: '/menu-ristorante-gourmet-arezzo'
+      fullPath: '/menu-ristorante-gourmet-arezzo'
+      preLoaderRoute: typeof MenuRistoranteGourmetArezzoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/menu': {
@@ -129,19 +160,10 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CookiePolicyRoute: CookiePolicyRoute,
   MenuRoute: MenuRoute,
+  MenuRistoranteGourmetArezzoRoute: MenuRistoranteGourmetArezzoRoute,
   PrivacyRoute: PrivacyRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
