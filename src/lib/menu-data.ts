@@ -212,7 +212,7 @@ export const menuSections: MenuSection[] = [
         en: "Duck breast",
         descIt: "con fondo ristretto, cavolo stufato in agrodolce e mela",
         descEn: "with reduced jus, sweet and sour braised cabbage and apple",
-        price: "17",
+        price: "22",
         allergens: [9],
       },
       {
@@ -220,14 +220,14 @@ export const menuSections: MenuSection[] = [
         en: "Rolled chicken thigh",
         descIt: "con peperoni arrosto in doppia consistenza",
         descEn: "with roasted peppers in two textures",
-        price: "14",
+        price: "17",
       },
       {
         it: "Hamburger di Chianina",
         en: "Chianina beef burger",
         descIt: "con il suo panino, pomodoro, insalata, cetriolini, pecorino e pancetta croccante",
         descEn: "in a bun with tomato, lettuce, pickles, pecorino and crispy pancetta",
-        price: "19",
+        price: "14",
         allergens: [1, 7],
       },
       {
@@ -235,7 +235,7 @@ export const menuSections: MenuSection[] = [
         en: "Crispy rabbit",
         descIt: "con senape e crema di carote",
         descEn: "with mustard and carrot cream",
-        price: "5,5 / 100g",
+        price: "19",
         allergens: [1, 3, 7, 10],
       },
       {
@@ -243,6 +243,7 @@ export const menuSections: MenuSection[] = [
         en: "Florentine T-bone steak",
         descIt: "alla brace, min. 1 kg",
         descEn: "grilled over charcoal, min. 1 kg",
+        price: "5,5 / 100g",
       },
     ],
   },
