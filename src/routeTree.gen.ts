@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as MenuRistoranteGourmetArezzoRouteImport } from './routes/menu-ristorante-gourmet-arezzo'
+import { Route as MenuRouteImport } from './routes/menu'
 import { Route as CookiePolicyRouteImport } from './routes/cookie-policy'
 import { Route as IndexRouteImport } from './routes/index'
 
@@ -31,6 +32,11 @@ const MenuRistoranteGourmetArezzoRoute =
     path: '/menu-ristorante-gourmet-arezzo',
     getParentRoute: () => rootRouteImport,
   } as any)
+const MenuRoute = MenuRouteImport.update({
+  id: '/menu',
+  path: '/menu',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CookiePolicyRoute = CookiePolicyRouteImport.update({
   id: '/cookie-policy',
   path: '/cookie-policy',
@@ -45,6 +51,7 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/cookie-policy': typeof CookiePolicyRoute
+  '/menu': typeof MenuRoute
   '/menu-ristorante-gourmet-arezzo': typeof MenuRistoranteGourmetArezzoRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -52,6 +59,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/cookie-policy': typeof CookiePolicyRoute
+  '/menu': typeof MenuRoute
   '/menu-ristorante-gourmet-arezzo': typeof MenuRistoranteGourmetArezzoRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -60,6 +68,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/cookie-policy': typeof CookiePolicyRoute
+  '/menu': typeof MenuRoute
   '/menu-ristorante-gourmet-arezzo': typeof MenuRistoranteGourmetArezzoRoute
   '/privacy': typeof PrivacyRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -69,6 +78,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/cookie-policy'
+    | '/menu'
     | '/menu-ristorante-gourmet-arezzo'
     | '/privacy'
     | '/sitemap.xml'
@@ -76,6 +86,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/cookie-policy'
+    | '/menu'
     | '/menu-ristorante-gourmet-arezzo'
     | '/privacy'
     | '/sitemap.xml'
@@ -83,6 +94,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/cookie-policy'
+    | '/menu'
     | '/menu-ristorante-gourmet-arezzo'
     | '/privacy'
     | '/sitemap.xml'
@@ -91,6 +103,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CookiePolicyRoute: typeof CookiePolicyRoute
+  MenuRoute: typeof MenuRoute
   MenuRistoranteGourmetArezzoRoute: typeof MenuRistoranteGourmetArezzoRoute
   PrivacyRoute: typeof PrivacyRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -119,6 +132,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MenuRistoranteGourmetArezzoRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/menu': {
+      id: '/menu'
+      path: '/menu'
+      fullPath: '/menu'
+      preLoaderRoute: typeof MenuRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/cookie-policy': {
       id: '/cookie-policy'
       path: '/cookie-policy'
@@ -139,6 +159,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CookiePolicyRoute: CookiePolicyRoute,
+  MenuRoute: MenuRoute,
   MenuRistoranteGourmetArezzoRoute: MenuRistoranteGourmetArezzoRoute,
   PrivacyRoute: PrivacyRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
