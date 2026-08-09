@@ -12,7 +12,7 @@ const title = "Menu | Antico Portale, ristorante gourmet in Valdambra (Arezzo)";
 const description =
   "Il menu stagionale di Antico Portale: antipasti, pasta fresca, secondi alla brace e dolci. Cucina toscana contemporanea in Valdambra, tra Valdarno, Arezzo, Firenze e Siena.";
 
-export const Route = createFileRoute("/menu")({
+export const Route = createFileRoute("/menu-ristorante-gourmet-arezzo")({
   head: () => ({
     meta: [
       { title },
@@ -20,11 +20,11 @@ export const Route = createFileRoute("/menu")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "article" },
-      { property: "og:url", content: `${SITE}/menu` },
+      { property: "og:url", content: `${SITE}/menu-ristorante-gourmet-arezzo` },
       { property: "og:locale", content: "it_IT" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: `${SITE}/menu` }],
+    links: [{ rel: "canonical", href: `${SITE}/menu-ristorante-gourmet-arezzo` }],
 
     scripts: [
       {
@@ -53,7 +53,7 @@ export const Route = createFileRoute("/menu")({
           "@type": "BreadcrumbList",
           itemListElement: [
             { "@type": "ListItem", position: 1, name: "Home", item: `${SITE}/` },
-            { "@type": "ListItem", position: 2, name: "Menu", item: `${SITE}/menu` },
+            { "@type": "ListItem", position: 2, name: "Menu", item: `${SITE}/menu-ristorante-gourmet-arezzo` },
           ],
         }),
       },

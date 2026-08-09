@@ -17,7 +17,7 @@ export function MenuGallery() {
             <p className="lede text-muted-foreground">{t.menu.text}</p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
-                to="/menu"
+                to="/menu-ristorante-gourmet-arezzo"
                 className="border border-forest-deep bg-forest-deep px-7 py-3.5 text-[0.78rem] tracking-[0.14em] text-ivory transition-colors duration-500 hover:bg-transparent hover:text-forest-deep"
               >
                 {t.menu.cta1}
@@ -67,7 +67,7 @@ export function MenuGallery() {
 
         <Reveal className="mt-14 flex justify-center">
           <Link
-            to="/menu"
+            to="/menu-ristorante-gourmet-arezzo"
             className="group inline-flex items-center gap-4 border border-forest-deep/30 px-9 py-4 text-[0.8rem] tracking-[0.14em] transition-colors duration-500 hover:border-forest-deep"
           >
             {t.menu.cta1}

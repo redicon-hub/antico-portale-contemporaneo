@@ -6,7 +6,7 @@ const sections = [
   { key: "restaurant", href: "/#il-ristorante" },
   { key: "kitchen", href: "/#la-cucina" },
   { key: "women", href: "/#le-protagoniste" },
-  { key: "menu", href: "/menu" },
+  { key: "menu", href: "/menu-ristorante-gourmet-arezzo" },
   { key: "experiences", href: "/#esperienze" },
   { key: "place", href: "/#il-luogo" },
   { key: "contact", href: "/#contatti" },
