@@ -95,6 +95,17 @@ export const copy = {
         duck: "Petto d'anatra e cavolo",
       },
     },
+    fishFriday: {
+      eyebrow: "Il venerdì",
+      title: "Il venerdì è la serata del pesce.",
+      text: "Ogni venerdì, accanto al nostro menu alla carta, proponiamo un menu speciale interamente dedicato al pesce: materia prima freschissima, interpretata con la stessa mano contemporanea e la stessa identità di sempre.",
+      text2: "Il menu del venerdì cambia ogni settimana, seguendo il pescato e la stagione.",
+      cta: "Scopri il menu",
+      captions: {
+        octopus: "Polpo, dal menu del venerdì",
+        spaghetti: "Spaghetto di mare",
+      },
+    },
     menuPage: {
       eyebrow: "Menu — agosto 2026",
       title: "Il menu di agosto",
@@ -268,6 +279,17 @@ export const copy = {
         steak: "Grilled meat",
         bread: "House breads",
         duck: "Duck breast and cabbage",
+      },
+    },
+    fishFriday: {
+      eyebrow: "Fridays",
+      title: "Friday is fish night.",
+      text: "Every Friday, alongside our à la carte menu, we offer a special menu entirely dedicated to fish: the freshest catch, interpreted with the same contemporary hand and the same identity as always.",
+      text2: "The Friday menu changes every week, following the catch and the season.",
+      cta: "Discover the menu",
+      captions: {
+        octopus: "Octopus, from the Friday menu",
+        spaghetti: "Seafood spaghetto",
       },
     },
     menuPage: {
