@@ -11,6 +11,7 @@ import bao1 from "@/assets/bao-1.png.asset.json";
 import bao2 from "@/assets/bao-2.jpg.asset.json";
 import piattoGourmet from "@/assets/piatto-gourmet.jpg.asset.json";
 import pesce from "@/assets/pesce.jpg.asset.json";
+import spaghettoMare from "@/assets/spaghetto-mare.jpg.asset.json";
 import bistecca from "@/assets/bistecca-focus.jpg";
 import paneMani from "@/assets/pane-mani.jpg.asset.json";
 import pane from "@/assets/pane.jpg.asset.json";
@@ -42,6 +43,7 @@ export const media = {
   DISH_DETAIL_01: risotto.url,
   DISH_DETAIL_02: piattoGourmet.url,
   DISH_FISH: pesce.url,
+  DISH_SPAGHETTI_MARE: spaghettoMare.url,
   DISH_STEAK: bistecca,
   DESSERT: dessert.url,
   COCKTAIL_MAIN: cocktailHero.url,

@@ -79,6 +79,64 @@ export function MenuGallery() {
   );
 }
 
+export function FishFriday() {
+  const { t } = useLang();
+  return (
+    <section className="bg-forest-deep text-ivory">
+      <div className="mx-auto max-w-[1500px] px-5 py-24 md:px-10 md:py-36">
+        <div className="grid gap-14 md:grid-cols-12 md:gap-10">
+          <div className="md:col-span-4">
+            <div className="md:sticky md:top-28">
+              <Reveal>
+                <p className="eyebrow text-copper">{t.fishFriday.eyebrow}</p>
+              </Reveal>
+              <Reveal delay={80}>
+                <h2 className="display-lg mt-6 max-w-[14ch] text-ivory">{t.fishFriday.title}</h2>
+              </Reveal>
+              <Reveal delay={160}>
+                <p className="lede mt-8 max-w-[42ch] text-ivory/70">{t.fishFriday.text}</p>
+              </Reveal>
+              <Reveal delay={220}>
+                <p className="mt-5 max-w-[42ch] text-[0.95rem] font-light leading-relaxed text-ivory/55">
+                  {t.fishFriday.text2}
+                </p>
+              </Reveal>
+              <Reveal delay={280}>
+                <Link
+                  to="/menu-ristorante-gourmet-arezzo"
+                  className="mt-10 inline-flex items-center gap-4 border border-ivory/40 px-7 py-3.5 text-[0.78rem] tracking-[0.14em] text-ivory transition-colors duration-500 hover:border-ivory hover:bg-ivory hover:text-forest-deep"
+                >
+                  {t.fishFriday.cta}
+                  <span aria-hidden className="h-px w-8 bg-current transition-all duration-500" />
+                </Link>
+              </Reveal>
+            </div>
+          </div>
+          <div className="grid gap-5 sm:grid-cols-2 md:col-span-7 md:col-start-6">
+            <Reveal>
+              <PlateFrame
+                src={media.DISH_FISH}
+                alt="Tentacolo di polpo, piatto del menu di pesce del venerdì"
+                title={t.fishFriday.captions.octopus}
+                ratio="aspect-[3/4]"
+              />
+            </Reveal>
+            <Reveal delay={140} className="sm:mt-16">
+              <PlateFrame
+                src={media.DISH_SPAGHETTI_MARE}
+                alt="Spaghetto di mare con frutti di mare, cucina contemporanea"
+                title={t.fishFriday.captions.spaghetti}
+                ratio="aspect-[3/4]"
+                position="50% 60%"
+              />
+            </Reveal>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function Aperitivo() {
   const { t } = useLang();
   return (

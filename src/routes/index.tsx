@@ -4,7 +4,7 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Hero } from "@/components/home/Hero";
 import { Manifesto, FourWomen, Kitchen, Bao, ChefRagu } from "@/components/home/Story";
-import { MenuGallery, Aperitivo, Place } from "@/components/home/Gallery";
+import { MenuGallery, FishFriday, Aperitivo, Place } from "@/components/home/Gallery";
 import { Reviews, Booking } from "@/components/home/Closing";
 import { Faq } from "@/components/home/Faq";
 import { faqCopy } from "@/lib/faq-content";
@@ -121,6 +121,7 @@ function Home() {
         <Bao />
         <ChefRagu />
         <MenuGallery />
+        <FishFriday />
         <Aperitivo />
         <Place />
         <Reviews />
