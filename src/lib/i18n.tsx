@@ -131,7 +131,7 @@ export const copy = {
       formulaEyebrow: "La formula per due",
       formulaTitle: "Tutto quello che serve per stare bene insieme.",
       board: "Tagliere del Portale oppure Tagliere Vegetariano",
-      bread: "La nostra Pagnotta",
+      bread: "La nostra pagnotta calda, servita appena sfornata",
       drinks: "2 drink a scelta tra Spritz, vino, Prosecco e cocktail classici",
       price: "35 €",
       priceNote: "per due persone",
