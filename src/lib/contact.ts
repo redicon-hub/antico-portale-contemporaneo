@@ -19,7 +19,7 @@ export const contact = {
   email: "",
   hours: [
     { key: "mon", open: null },
-    { key: "tue", open: null },
+    { key: "tue", open: "18:30 – 22:00" },
     { key: "wed", open: "18:30 – 22:00" },
     { key: "thu", open: "18:30 – 22:00" },
     { key: "fri", open: "18:30 – 22:00" },
