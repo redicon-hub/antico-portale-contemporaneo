@@ -20,6 +20,9 @@ import terrazza1 from "@/assets/terrazza-1.jpg.asset.json";
 import terrazza2 from "@/assets/terrazza-2.jpg.asset.json";
 import drink from "@/assets/drink.png.asset.json";
 import aperitivoTerrazza from "@/assets/aperitivo-terrazza.jpg.asset.json";
+import aperitivoProvinciaArezzo from "@/assets/aperitivo-provincia-arezzo.jpeg.asset.json";
+import aperitivoValdambraArezzo from "@/assets/aperitivo-valdambra-provincia-arezzo.jpeg.asset.json";
+import aperitivoValdarnoArezzo from "@/assets/aperitivo-valdarno-provincia-arezzo.jpeg.asset.json";
 import brigataTeam from "@/assets/brigata-team-v2.jpg.asset.json";
 import michaela from "@/assets/michela-v5.jpg.asset.json";
 import maddalena from "@/assets/maddalena-v2.jpg.asset.json";
@@ -51,6 +54,9 @@ export const media = {
   TERRACE_02: terrazza2.url,
   DRINK_DETAIL: drink.url,
   TABLE_EXPERIENCE: aperitivoTerrazza.url,
+  APERITIVO_CLOSE: aperitivoProvinciaArezzo.url,
+  APERITIVO_TABLE: aperitivoValdambraArezzo.url,
+  APERITIVO_BOARD: aperitivoValdarnoArezzo.url,
   COURTYARD: patio.url,
   WOODS_EXTERIOR: giardino.url,
   OUTDOOR_SPACE: esternoSpazio.url,
