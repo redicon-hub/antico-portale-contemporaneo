@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useLang } from "@/lib/i18n";
 import { media } from "@/lib/media";
 import { Reveal, PlateFrame } from "@/components/site/primitives";
+import { Button } from "@/components/ui/button";
 
 export function MenuGallery() {
   const { t } = useLang();
@@ -140,41 +141,72 @@ export function FishFriday() {
 export function Aperitivo() {
   const { t } = useLang();
   return (
-    <section id="esperienze" className="bg-ink py-5 md:py-10">
-      <Reveal className="mx-auto max-w-[1600px] px-5 md:px-10">
-        <Link
-          to="/aperitivo-valdarno-provincia-arezzo"
-          className="group relative block min-h-[72svh] overflow-hidden"
-          aria-label={t.aperitivo.cta}
-        >
-          <img
-            src={media.APERITIVO_TABLE}
-            alt="Aperitivo sulla terrazza di Antico Portale in provincia di Arezzo"
-            loading="lazy"
-            decoding="async"
-            width={1200}
-            height={1600}
-            className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-[1600ms] ease-out group-hover:scale-[1.025]"
-          />
-          <span aria-hidden className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/20 to-ink/15" />
-          <div className="relative flex min-h-[72svh] flex-col justify-end px-6 py-10 text-ivory md:px-14 md:py-14">
-            <p className="eyebrow text-copper">{t.aperitivo.eyebrow}</p>
-            <div className="mt-5 flex flex-col gap-7 md:flex-row md:items-end md:justify-between">
-              <div>
-                <h2 className="display-lg max-w-[13ch] text-ivory">{t.aperitivo.title}</h2>
-                <p className="lede mt-5 max-w-[46ch] text-ivory/80">{t.aperitivo.text}</p>
+    <section id="esperienze" className="bg-earth/10 py-24 md:py-36">
+      <div className="mx-auto max-w-[1500px] px-5 md:px-10">
+        <div className="grid gap-8 lg:grid-cols-12 lg:items-stretch lg:gap-10">
+          <Reveal className="grid min-h-[600px] grid-cols-5 gap-3 sm:gap-5 lg:col-span-8 lg:min-h-[720px]">
+            <div className="group relative col-span-3 overflow-hidden">
+              <img
+                src={media.APERITIVO_TABLE}
+                alt="Aperitivo sulla terrazza di Antico Portale in provincia di Arezzo"
+                loading="lazy"
+                decoding="async"
+                width={1200}
+                height={1600}
+                className="h-full w-full object-cover object-center transition-transform duration-[1600ms] ease-out group-hover:scale-[1.025]"
+              />
+            </div>
+            <div className="col-span-2 grid grid-rows-2 gap-3 sm:gap-5">
+              <div className="group overflow-hidden">
+                <img
+                  src={media.APERITIVO_CLOSE}
+                  alt="Cocktail e tagliere dell'aperitivo di Antico Portale"
+                  loading="lazy"
+                  decoding="async"
+                  width={1200}
+                  height={1600}
+                  className="h-full w-full object-cover object-center transition-transform duration-[1600ms] ease-out group-hover:scale-[1.025]"
+                />
               </div>
-              <div className="shrink-0 md:text-right">
-                <p className="font-display text-2xl font-light text-ivory">{t.aperitivo.price}</p>
-                <span className="mt-4 inline-flex items-center gap-4 border-b border-ivory/60 pb-2 text-[0.78rem] tracking-[0.14em]">
-                  {t.aperitivo.cta}
-                  <span aria-hidden className="h-px w-8 bg-current transition-all duration-500 group-hover:w-12" />
-                </span>
+              <div className="group overflow-hidden">
+                <img
+                  src={media.APERITIVO_BOARD}
+                  alt="Tagliere del Portale e cocktail sulla terrazza"
+                  loading="lazy"
+                  decoding="async"
+                  width={1200}
+                  height={1600}
+                  className="h-full w-full object-cover object-center transition-transform duration-[1600ms] ease-out group-hover:scale-[1.025]"
+                />
               </div>
             </div>
-          </div>
-        </Link>
-      </Reveal>
+          </Reveal>
+
+          <Reveal delay={120} className="flex flex-col justify-center border-y border-forest-deep/20 py-10 lg:col-span-4 lg:px-4 lg:py-14">
+            <p className="eyebrow text-copper">{t.aperitivo.eyebrow}</p>
+            <h2 className="display-lg mt-6 max-w-[11ch]">{t.aperitivo.title}</h2>
+            <p className="lede mt-6 max-w-[36ch] text-muted-foreground">{t.aperitivo.text}</p>
+
+            <div className="mt-9 border-l-2 border-copper pl-5">
+              <p className="font-display text-3xl font-light text-forest-deep md:text-4xl">{t.aperitivo.price}</p>
+              <p className="mt-3 text-sm font-light leading-relaxed text-muted-foreground">
+                {t.aperitivoPage.board} · {t.aperitivoPage.bread} · {t.aperitivoPage.drinks}
+              </p>
+            </div>
+
+            <Button
+              asChild
+              size="lg"
+              className="mt-10 h-auto w-full rounded-none px-7 py-5 text-[0.78rem] tracking-[0.14em] shadow-none sm:w-fit"
+            >
+              <Link to="/aperitivo-valdarno-provincia-arezzo" className="group">
+                {t.aperitivo.cta}
+                <span aria-hidden className="h-px w-8 bg-current transition-all duration-500 group-hover:w-12" />
+              </Link>
+            </Button>
+          </Reveal>
+        </div>
+      </div>
     </section>
   );
 }
