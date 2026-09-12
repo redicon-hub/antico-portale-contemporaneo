@@ -16,6 +16,7 @@ export const Route = createFileRoute("/sitemap.xml")({
         const entries: SitemapEntry[] = [
           { path: "/", changefreq: "weekly", priority: "1.0" },
           { path: "/menu-ristorante-gourmet-arezzo", changefreq: "monthly", priority: "0.9" },
+          { path: "/aperitivo-valdarno-provincia-arezzo", changefreq: "monthly", priority: "0.9" },
           { path: "/privacy", changefreq: "yearly", priority: "0.2" },
           { path: "/cookie-policy", changefreq: "yearly", priority: "0.2" },
         ];

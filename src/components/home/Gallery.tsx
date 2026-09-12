@@ -140,48 +140,41 @@ export function FishFriday() {
 export function Aperitivo() {
   const { t } = useLang();
   return (
-    <section id="esperienze" className="bg-earth/10 py-24 md:py-36">
-      <div className="mx-auto max-w-[1500px] px-5 md:px-10">
-        <div className="grid items-end gap-10 md:grid-cols-12">
-          <Reveal className="md:col-span-7">
-            <img
-              src={media.COCKTAIL_MAIN}
-              alt="Cocktail d'autore servito in terrazza ad Antico Portale, Valdambra"
-              loading="lazy"
-              decoding="async"
-              width={1400}
-              height={1050}
-              className="aspect-[4/3] w-full object-cover"
-            />
-          </Reveal>
-          <Reveal delay={120} className="md:col-span-4 md:col-start-9">
+    <section id="esperienze" className="bg-ink py-5 md:py-10">
+      <Reveal className="mx-auto max-w-[1600px] px-5 md:px-10">
+        <Link
+          to="/aperitivo-valdarno-provincia-arezzo"
+          className="group relative block min-h-[72svh] overflow-hidden"
+          aria-label={t.aperitivo.cta}
+        >
+          <img
+            src={media.APERITIVO_TABLE}
+            alt="Aperitivo sulla terrazza di Antico Portale in provincia di Arezzo"
+            loading="lazy"
+            decoding="async"
+            width={1200}
+            height={1600}
+            className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-[1600ms] ease-out group-hover:scale-[1.025]"
+          />
+          <span aria-hidden className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/20 to-ink/15" />
+          <div className="relative flex min-h-[72svh] flex-col justify-end px-6 py-10 text-ivory md:px-14 md:py-14">
             <p className="eyebrow text-copper">{t.aperitivo.eyebrow}</p>
-            <h2 className="display-md mt-6 max-w-[16ch]">{t.aperitivo.title}</h2>
-            <p className="body-copy mt-6 text-muted-foreground">{t.aperitivo.text}</p>
-          </Reveal>
-        </div>
-
-        <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
-          {[
-            { src: media.TERRACE_01, alt: "Terrazza al tramonto" },
-            { src: media.DRINK_DETAIL, alt: "Dettaglio di un drink" },
-            { src: media.TERRACE_02, alt: "Tavoli in terrazza d'estate" },
-            { src: media.TABLE_EXPERIENCE, alt: "Aperitivo servito all'aperto" },
-          ].map((im, i) => (
-            <Reveal key={im.alt} delay={i * 80}>
-              <img
-                src={im.src}
-                alt={im.alt}
-                loading="lazy"
-                decoding="async"
-                width={800}
-                height={1000}
-                className="aspect-[4/5] w-full object-cover transition-transform duration-[1200ms] ease-out hover:scale-[1.02]"
-              />
-            </Reveal>
-          ))}
-        </div>
-      </div>
+            <div className="mt-5 flex flex-col gap-7 md:flex-row md:items-end md:justify-between">
+              <div>
+                <h2 className="display-lg max-w-[13ch] text-ivory">{t.aperitivo.title}</h2>
+                <p className="lede mt-5 max-w-[46ch] text-ivory/80">{t.aperitivo.text}</p>
+              </div>
+              <div className="shrink-0 md:text-right">
+                <p className="font-display text-2xl font-light text-ivory">{t.aperitivo.price}</p>
+                <span className="mt-4 inline-flex items-center gap-4 border-b border-ivory/60 pb-2 text-[0.78rem] tracking-[0.14em]">
+                  {t.aperitivo.cta}
+                  <span aria-hidden className="h-px w-8 bg-current transition-all duration-500 group-hover:w-12" />
+                </span>
+              </div>
+            </div>
+          </div>
+        </Link>
+      </Reveal>
     </section>
   );
 }
