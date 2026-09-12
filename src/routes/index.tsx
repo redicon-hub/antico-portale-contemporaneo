@@ -17,7 +17,7 @@ const description =
   "Ristorante gourmet in provincia di Arezzo: cucina toscana contemporanea in Valdambra, a due passi dal Valdarno, tra Arezzo, Firenze e Siena. Menu stagionale, brigata femminile, prenotazioni.";
 
 const openingHours = [
-  { days: ["Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], opens: "18:30", closes: "22:00" },
+  { days: ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], opens: "18:30", closes: "22:00" },
 ];
 
 export const Route = createFileRoute("/")({

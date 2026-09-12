@@ -27,7 +27,7 @@ export const faqCopy: Record<Lang, { eyebrow: string; title: string; intro: stri
       },
       {
         q: "Quali sono gli orari di apertura?",
-        a: "Il ristorante è aperto dal mercoledì alla domenica dalle 18:30 alle 22:00. Lunedì e martedì è chiuso.",
+        a: "Il ristorante è aperto dal martedì alla domenica dalle 18:30 alle 22:00. Il lunedì è chiuso.",
       },
       {
         q: "Come si prenota un tavolo?",
@@ -67,7 +67,7 @@ export const faqCopy: Record<Lang, { eyebrow: string; title: string; intro: stri
       },
       {
         q: "What are the opening hours?",
-        a: "The restaurant is open Wednesday to Sunday, 6:30 pm to 10:00 pm. It is closed on Monday and Tuesday.",
+        a: "The restaurant is open Tuesday to Sunday, 6:30 pm to 10:00 pm. It is closed on Monday.",
       },
       {
         q: "How do I book a table?",
