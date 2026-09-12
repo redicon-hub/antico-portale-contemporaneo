@@ -100,7 +100,16 @@ export function Footer() {
                   {t.booking.directionsCta}
                 </a>
               </li>
-              <li className="text-ivory/45">Instagram — {t.intl.soon}</li>
+              <li>
+                <a
+                  href="https://www.instagram.com/ristorante.anticoportale/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-opacity hover:opacity-65"
+                >
+                  Instagram
+                </a>
+              </li>
             </ul>
             <a
               href="#contatti"
