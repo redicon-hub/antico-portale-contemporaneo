@@ -14,6 +14,7 @@ import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as MenuRistoranteGourmetArezzoRouteImport } from './routes/menu-ristorante-gourmet-arezzo'
 import { Route as MenuRouteImport } from './routes/menu'
 import { Route as CookiePolicyRouteImport } from './routes/cookie-policy'
+import { Route as AperitivoValdarnoProvinciaArezzoRouteImport } from './routes/aperitivo-valdarno-provincia-arezzo'
 import { Route as IndexRouteImport } from './routes/index'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -42,6 +43,12 @@ const CookiePolicyRoute = CookiePolicyRouteImport.update({
   path: '/cookie-policy',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AperitivoValdarnoProvinciaArezzoRoute =
+  AperitivoValdarnoProvinciaArezzoRouteImport.update({
+    id: '/aperitivo-valdarno-provincia-arezzo',
+    path: '/aperitivo-valdarno-provincia-arezzo',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -50,6 +57,7 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/aperitivo-valdarno-provincia-arezzo': typeof AperitivoValdarnoProvinciaArezzoRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/menu': typeof MenuRoute
   '/menu-ristorante-gourmet-arezzo': typeof MenuRistoranteGourmetArezzoRoute
@@ -58,6 +66,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/aperitivo-valdarno-provincia-arezzo': typeof AperitivoValdarnoProvinciaArezzoRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/menu': typeof MenuRoute
   '/menu-ristorante-gourmet-arezzo': typeof MenuRistoranteGourmetArezzoRoute
@@ -67,6 +76,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/aperitivo-valdarno-provincia-arezzo': typeof AperitivoValdarnoProvinciaArezzoRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/menu': typeof MenuRoute
   '/menu-ristorante-gourmet-arezzo': typeof MenuRistoranteGourmetArezzoRoute
@@ -77,6 +87,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/aperitivo-valdarno-provincia-arezzo'
     | '/cookie-policy'
     | '/menu'
     | '/menu-ristorante-gourmet-arezzo'
@@ -85,6 +96,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/aperitivo-valdarno-provincia-arezzo'
     | '/cookie-policy'
     | '/menu'
     | '/menu-ristorante-gourmet-arezzo'
@@ -93,6 +105,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/aperitivo-valdarno-provincia-arezzo'
     | '/cookie-policy'
     | '/menu'
     | '/menu-ristorante-gourmet-arezzo'
@@ -102,6 +115,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AperitivoValdarnoProvinciaArezzoRoute: typeof AperitivoValdarnoProvinciaArezzoRoute
   CookiePolicyRoute: typeof CookiePolicyRoute
   MenuRoute: typeof MenuRoute
   MenuRistoranteGourmetArezzoRoute: typeof MenuRistoranteGourmetArezzoRoute
@@ -146,6 +160,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CookiePolicyRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/aperitivo-valdarno-provincia-arezzo': {
+      id: '/aperitivo-valdarno-provincia-arezzo'
+      path: '/aperitivo-valdarno-provincia-arezzo'
+      fullPath: '/aperitivo-valdarno-provincia-arezzo'
+      preLoaderRoute: typeof AperitivoValdarnoProvinciaArezzoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -158,6 +179,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AperitivoValdarnoProvinciaArezzoRoute: AperitivoValdarnoProvinciaArezzoRoute,
   CookiePolicyRoute: CookiePolicyRoute,
   MenuRoute: MenuRoute,
   MenuRistoranteGourmetArezzoRoute: MenuRistoranteGourmetArezzoRoute,
