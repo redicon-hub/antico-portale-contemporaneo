@@ -339,7 +339,7 @@ export const copy = {
       formulaEyebrow: "The formula for two",
       formulaTitle: "Everything you need to enjoy time together.",
       board: "Portale sharing board or vegetarian sharing board",
-      bread: "Our house loaf",
+      bread: "Our warm house loaf, served straight from the oven",
       drinks: "2 drinks chosen from Spritz, wine, Prosecco and classic cocktails",
       price: "€35",
       priceNote: "for two people",
