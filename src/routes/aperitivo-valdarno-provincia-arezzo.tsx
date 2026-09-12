@@ -161,33 +161,36 @@ function AperitivoContent() {
 
       <section className="bg-forest-deep py-24 text-ivory md:py-36">
         <div className="mx-auto max-w-[1500px] px-5 md:px-10">
-          <div className="grid gap-5 md:grid-cols-12">
-            <Reveal className="md:col-span-7">
+          <div className="grid gap-10 md:grid-cols-12 md:gap-6">
+            <Reveal className="md:col-span-4 md:pt-10">
+              <p className="eyebrow text-copper">{t.aperitivoPage.atmosphereEyebrow}</p>
+              <h2 className="display-md mt-6 max-w-[13ch] text-ivory">{t.aperitivoPage.atmosphereTitle}</h2>
+              <p className="body-copy mt-6 max-w-[34ch] text-ivory/70">{t.aperitivoPage.atmosphereText}</p>
+            </Reveal>
+
+            <Reveal delay={100} className="md:col-span-4">
               <img
                 src={media.APERITIVO_TABLE}
                 alt="Tavolo apparecchiato per l'aperitivo sulla terrazza di Antico Portale"
                 loading="lazy"
                 width={1200}
                 height={1600}
-                className="aspect-[4/5] w-full object-cover md:aspect-[5/4]"
+                className="aspect-[4/5] w-full object-cover"
               />
             </Reveal>
-            <Reveal delay={120} className="md:col-span-4 md:col-start-9 md:pt-28">
-              <p className="eyebrow text-copper">{t.aperitivoPage.atmosphereEyebrow}</p>
-              <h2 className="display-md mt-6 max-w-[13ch] text-ivory">{t.aperitivoPage.atmosphereTitle}</h2>
-              <p className="body-copy mt-6 text-ivory/70">{t.aperitivoPage.atmosphereText}</p>
+
+            <Reveal delay={200} className="md:col-span-4">
+              <img
+                src={media.APERITIVO_CLOSE}
+                alt="Cocktail e tagliere dell'aperitivo di Antico Portale"
+                loading="lazy"
+                width={1200}
+                height={1600}
+                className="aspect-[4/5] w-full object-cover"
+              />
             </Reveal>
           </div>
-          <Reveal className="mt-5 grid gap-5 md:grid-cols-12">
-            <img
-              src={media.APERITIVO_CLOSE}
-              alt="Cocktail e tagliere dell'aperitivo di Antico Portale"
-              loading="lazy"
-              width={1200}
-              height={1600}
-              className="aspect-[4/5] w-full object-cover md:col-span-5 md:col-start-7"
-            />
-          </Reveal>
+
           <Reveal className="mt-14 flex justify-center">
             <Link
               to="/"
