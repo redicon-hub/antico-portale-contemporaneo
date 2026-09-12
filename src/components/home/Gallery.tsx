@@ -144,7 +144,7 @@ export function Aperitivo() {
     <section id="esperienze" className="bg-earth/10 py-24 md:py-36">
       <div className="mx-auto max-w-[1500px] px-5 md:px-10">
         <div className="grid gap-8 lg:grid-cols-12 lg:items-stretch lg:gap-10">
-          <Reveal className="grid min-h-[600px] grid-cols-5 gap-3 sm:gap-5 lg:col-span-8 lg:min-h-[720px]">
+          <Reveal className="grid min-h-[460px] grid-cols-5 gap-3 sm:min-h-[600px] sm:gap-5 lg:col-span-8 lg:min-h-[720px]">
             <div className="group relative col-span-3 overflow-hidden">
               <img
                 src={media.APERITIVO_TABLE}
