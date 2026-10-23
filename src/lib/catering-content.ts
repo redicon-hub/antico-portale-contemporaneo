@@ -6,6 +6,16 @@ import cEspresso from "@/assets/matrimonio-catering-provincia-di-arezzo.jpg.asse
 import cCortile from "@/assets/matrimoni-provincia-di-arezzo-catering.jpg.asset.json";
 import cTavoli from "@/assets/servizio-catering-valdambra.jpg.asset.json";
 import cMise from "@/assets/catering-arezzo-gourmet.jpg.asset.json";
+import g0 from "@/assets/catering-aziendale-provincia-di-arezzo.jpg.asset.json";
+import g1 from "@/assets/catering-feste-arezzo-e-provincia.jpg.asset.json";
+import g2 from "@/assets/catering-matrimoni-gourmet-provincia-di-arezzo.jpg.asset.json";
+import g3 from "@/assets/catering-matrimoni-provincia-di-arezzo.jpg.asset.json";
+import g4 from "@/assets/catering-matrimonio-arezzo.jpg.asset.json";
+import g5 from "@/assets/catering-valdambra-valdarno.jpg.asset.json";
+import g6 from "@/assets/eventi-aziendali-arezzo-e-provincia.jpg.asset.json";
+import g7 from "@/assets/finger-food-matrimonio-arezzo.jpg.asset.json";
+import g8 from "@/assets/matrimoni-provincia-di-arezzo-catering-gourmet.jpg.asset.json";
+import g9 from "@/assets/servizio-catering-valdarno.jpg.asset.json";
 
 export const CATERING_PATH = "/catering-matrimoni-eventi-arezzo-valdarno";
 
@@ -17,8 +27,24 @@ export const cateringMedia = {
   ESPRESSO: cEspresso.url,
   COURTYARD: cCortile.url,
   TABLES: cTavoli.url,
+  CORPORATE: cEspresso.url,
+  PRIVATE: g3.url,
+  FINGER: g2.url,
   MISE: cMise.url,
 };
+
+export const cateringGallery = [
+  { src: g0.url, alt: "Allestimento cerimonia in giardino — catering eventi provincia di Arezzo" },
+  { src: g1.url, alt: "Tavola elegante a lume di candela — catering eventi provincia di Arezzo" },
+  { src: g2.url, alt: "Torre di Champagne su tavolata — catering eventi provincia di Arezzo" },
+  { src: g3.url, alt: "Cena conviviale con gli ospiti — catering eventi provincia di Arezzo" },
+  { src: g4.url, alt: "Tavolata sotto le volte in pietra — catering eventi provincia di Arezzo" },
+  { src: g5.url, alt: "Tavolata illuminata tra gli ulivi — catering eventi provincia di Arezzo" },
+  { src: g6.url, alt: "Ospiti durante il ricevimento — catering eventi provincia di Arezzo" },
+  { src: g7.url, alt: "Lunga tavolata in sala storica — catering eventi provincia di Arezzo" },
+  { src: g8.url, alt: "Cerimonia all'aperto tra i cipressi — catering eventi provincia di Arezzo" },
+  { src: g9.url, alt: "Sala allestita di sera — catering eventi provincia di Arezzo" },
+];
 
 export const cateringCopy = {
   it: {
@@ -69,6 +95,9 @@ export const cateringCopy = {
     formText: "Data, location, numero di ospiti: vi prepariamo una proposta su misura.",
     whatsapp: "Scrivici su WhatsApp",
     call: "Chiamaci",
+    galleryEyebrow: "Galleria",
+    galleryTitle: "Momenti firmati Antico Portale",
+    form: { name: "Nome e cognome", phone: "Telefono", date: "Data dell'evento", guests: "Numero di ospiti", type: "Tipo di evento", location: "Location", message: "Raccontaci la tua idea", types: ["Matrimonio", "Evento aziendale", "Festa privata", "Altro"], submit: "Invia la richiesta", note: "La richiesta si apre su WhatsApp, pronta da inviare.", required: "Compila nome, telefono e tipo di evento." },
     back: "Torna alla home",
   },
   en: {
@@ -119,6 +148,9 @@ export const cateringCopy = {
     formText: "Date, venue, number of guests: we'll prepare a tailored proposal.",
     whatsapp: "Message us on WhatsApp",
     call: "Call us",
+    galleryEyebrow: "Gallery",
+    galleryTitle: "Moments signed Antico Portale",
+    form: { name: "Full name", phone: "Phone", date: "Event date", guests: "Number of guests", type: "Event type", location: "Venue", message: "Tell us your idea", types: ["Wedding", "Corporate event", "Private party", "Other"], submit: "Send request", note: "Your request opens in WhatsApp, ready to send.", required: "Please fill in name, phone and event type." },
     back: "Back to home",
   },
 } as const;
