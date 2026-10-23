@@ -4,7 +4,8 @@ import { Footer } from "@/components/site/Footer";
 import { Reveal } from "@/components/site/primitives";
 import { contact } from "@/lib/contact";
 import { LangProvider, useLang } from "@/lib/i18n";
-import { cateringCopy, cateringMedia, CATERING_PATH } from "@/lib/catering-content";
+import { CateringForm } from "@/components/site/CateringForm";
+import { cateringCopy, cateringGallery, cateringMedia, CATERING_PATH } from "@/lib/catering-content";
 
 const SITE = "https://www.anticoportalevaldambra.com";
 const PAGE_URL = `${SITE}${CATERING_PATH}`;
@@ -115,7 +116,7 @@ function CateringContent() {
             <h2 className="display-md mt-6 max-w-[18ch] text-ivory">{c.occasionsTitle}</h2>
           </Reveal>
           <div className="mt-14 grid gap-6 md:grid-cols-3">
-            {[cateringMedia.COURTYARD, cateringMedia.MISE, cateringMedia.TABLES].map((src, i) => (
+            {[cateringMedia.COURTYARD, cateringMedia.CORPORATE, cateringMedia.PRIVATE].map((src, i) => (
               <Reveal key={src} delay={i * 100}>
                 <div className="relative aspect-[4/5] overflow-hidden">
                   <img src={src} alt={`${c.occasions[i].k} — catering provincia di Arezzo`} loading="lazy" className="h-full w-full object-cover" />
@@ -151,7 +152,7 @@ function CateringContent() {
       <section className="bg-ink text-ivory">
         <div className="mx-auto grid max-w-[1500px] md:grid-cols-12">
           <div className="grid grid-cols-2 gap-3 p-5 md:col-span-7 md:p-10">
-            <img src={cateringMedia.ESPRESSO} alt="Brindisi con Espresso Martini, open bar per matrimoni" loading="lazy" className="aspect-[3/4] w-full object-cover" />
+            <img src={cateringMedia.FINGER} alt="Torre di Champagne e tavolata, catering gourmet" loading="lazy" className="aspect-[3/4] w-full object-cover" />
             <img src={cateringMedia.MILLEFOGLIE} alt="Millefoglie nuziale ai frutti di bosco" loading="lazy" className="aspect-[3/4] w-full object-cover" />
           </div>
           <Reveal className="flex flex-col justify-center px-5 pb-16 md:col-span-5 md:px-12 md:py-20">
@@ -166,9 +167,23 @@ function CateringContent() {
         </div>
       </section>
 
+      <section className="bg-background py-24 md:py-32">
+        <div className="mx-auto max-w-[1500px] px-5 md:px-10">
+          <Reveal>
+            <p className="eyebrow text-copper">{c.galleryEyebrow}</p>
+            <h2 className="display-md mt-6">{c.galleryTitle}</h2>
+          </Reveal>
+          <div className="mt-14 columns-1 gap-4 sm:columns-2 lg:columns-3">
+            {[...cateringGallery, { src: cateringMedia.MISE, alt: "Mise en place con fiori, catering matrimoni Arezzo" }, { src: cateringMedia.TABLES, alt: "Tavoli in giardino, catering Valdambra" }].map((g) => (
+              <img key={g.src} src={g.src} alt={g.alt} loading="lazy" className="mb-4 w-full break-inside-avoid object-cover" />
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="relative overflow-hidden bg-forest-deep py-24 text-ivory md:py-32">
         <img src={cateringMedia.TOWER} alt="" aria-hidden loading="lazy" className="absolute inset-0 h-full w-full object-cover opacity-25" />
-        <Reveal className="relative mx-auto max-w-3xl px-5 text-center">
+        <Reveal className="relative mx-auto max-w-4xl px-5 text-center">
           <h2 className="display-md text-ivory">{c.formTitle}</h2>
           <p className="lede mx-auto mt-6 max-w-[40ch] text-ivory/80">{c.formText}</p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
@@ -179,6 +194,7 @@ function CateringContent() {
               {c.call}
             </a>
           </div>
+          <CateringForm />
           <Link to="/" className="mt-12 inline-block border-b border-ivory/50 pb-2 text-[0.78rem] tracking-[0.14em] hover:opacity-70">
             {c.back}
           </Link>
