@@ -17,6 +17,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/", changefreq: "weekly", priority: "1.0" },
           { path: "/menu-ristorante-gourmet-arezzo", changefreq: "monthly", priority: "0.9" },
           { path: "/aperitivo-valdarno-provincia-arezzo", changefreq: "monthly", priority: "0.9" },
+          { path: "/catering-matrimoni-eventi-arezzo-valdarno", changefreq: "monthly", priority: "0.9" },
           { path: "/privacy", changefreq: "yearly", priority: "0.2" },
           { path: "/cookie-policy", changefreq: "yearly", priority: "0.2" },
         ];

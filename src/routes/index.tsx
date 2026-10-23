@@ -7,6 +7,7 @@ import { Manifesto, FourWomen, Kitchen, Bao, ChefRagu } from "@/components/home/
 import { MenuGallery, FishFriday, Aperitivo, Place } from "@/components/home/Gallery";
 import { Reviews, Booking } from "@/components/home/Closing";
 import { Faq } from "@/components/home/Faq";
+import { CateringCta } from "@/components/home/CateringCta";
 import { faqCopy } from "@/lib/faq-content";
 import { contact } from "@/lib/contact";
 
@@ -123,6 +124,7 @@ function Home() {
         <MenuGallery />
         <FishFriday />
         <Aperitivo />
+        <CateringCta />
         <Place />
         <Reviews />
         <Faq />

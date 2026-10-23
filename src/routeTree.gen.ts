@@ -9,38 +9,18 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as PrivacyRouteImport } from './routes/privacy'
-import { Route as MenuRistoranteGourmetArezzoRouteImport } from './routes/menu-ristorante-gourmet-arezzo'
-import { Route as MenuRouteImport } from './routes/menu'
-import { Route as CookiePolicyRouteImport } from './routes/cookie-policy'
-import { Route as AperitivoValdarnoProvinciaArezzoRouteImport } from './routes/aperitivo-valdarno-provincia-arezzo'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AperitivoValdarnoProvinciaArezzoRouteImport } from './routes/aperitivo-valdarno-provincia-arezzo'
+import { Route as CateringMatrimoniEventiArezzoValdarnoRouteImport } from './routes/catering-matrimoni-eventi-arezzo-valdarno'
+import { Route as CookiePolicyRouteImport } from './routes/cookie-policy'
+import { Route as MenuRouteImport } from './routes/menu'
+import { Route as MenuRistoranteGourmetArezzoRouteImport } from './routes/menu-ristorante-gourmet-arezzo'
+import { Route as PrivacyRouteImport } from './routes/privacy'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PrivacyRoute = PrivacyRouteImport.update({
-  id: '/privacy',
-  path: '/privacy',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MenuRistoranteGourmetArezzoRoute =
-  MenuRistoranteGourmetArezzoRouteImport.update({
-    id: '/menu-ristorante-gourmet-arezzo',
-    path: '/menu-ristorante-gourmet-arezzo',
-    getParentRoute: () => rootRouteImport,
-  } as any)
-const MenuRoute = MenuRouteImport.update({
-  id: '/menu',
-  path: '/menu',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CookiePolicyRoute = CookiePolicyRouteImport.update({
-  id: '/cookie-policy',
-  path: '/cookie-policy',
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AperitivoValdarnoProvinciaArezzoRoute =
@@ -49,15 +29,43 @@ const AperitivoValdarnoProvinciaArezzoRoute =
     path: '/aperitivo-valdarno-provincia-arezzo',
     getParentRoute: () => rootRouteImport,
   } as any)
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
+const CateringMatrimoniEventiArezzoValdarnoRoute =
+  CateringMatrimoniEventiArezzoValdarnoRouteImport.update({
+    id: '/catering-matrimoni-eventi-arezzo-valdarno',
+    path: '/catering-matrimoni-eventi-arezzo-valdarno',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const CookiePolicyRoute = CookiePolicyRouteImport.update({
+  id: '/cookie-policy',
+  path: '/cookie-policy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MenuRoute = MenuRouteImport.update({
+  id: '/menu',
+  path: '/menu',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MenuRistoranteGourmetArezzoRoute =
+  MenuRistoranteGourmetArezzoRouteImport.update({
+    id: '/menu-ristorante-gourmet-arezzo',
+    path: '/menu-ristorante-gourmet-arezzo',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/aperitivo-valdarno-provincia-arezzo': typeof AperitivoValdarnoProvinciaArezzoRoute
+  '/catering-matrimoni-eventi-arezzo-valdarno': typeof CateringMatrimoniEventiArezzoValdarnoRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/menu': typeof MenuRoute
   '/menu-ristorante-gourmet-arezzo': typeof MenuRistoranteGourmetArezzoRoute
@@ -67,6 +75,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/aperitivo-valdarno-provincia-arezzo': typeof AperitivoValdarnoProvinciaArezzoRoute
+  '/catering-matrimoni-eventi-arezzo-valdarno': typeof CateringMatrimoniEventiArezzoValdarnoRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/menu': typeof MenuRoute
   '/menu-ristorante-gourmet-arezzo': typeof MenuRistoranteGourmetArezzoRoute
@@ -77,6 +86,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/aperitivo-valdarno-provincia-arezzo': typeof AperitivoValdarnoProvinciaArezzoRoute
+  '/catering-matrimoni-eventi-arezzo-valdarno': typeof CateringMatrimoniEventiArezzoValdarnoRoute
   '/cookie-policy': typeof CookiePolicyRoute
   '/menu': typeof MenuRoute
   '/menu-ristorante-gourmet-arezzo': typeof MenuRistoranteGourmetArezzoRoute
@@ -88,6 +98,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/aperitivo-valdarno-provincia-arezzo'
+    | '/catering-matrimoni-eventi-arezzo-valdarno'
     | '/cookie-policy'
     | '/menu'
     | '/menu-ristorante-gourmet-arezzo'
@@ -97,6 +108,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/aperitivo-valdarno-provincia-arezzo'
+    | '/catering-matrimoni-eventi-arezzo-valdarno'
     | '/cookie-policy'
     | '/menu'
     | '/menu-ristorante-gourmet-arezzo'
@@ -106,6 +118,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/aperitivo-valdarno-provincia-arezzo'
+    | '/catering-matrimoni-eventi-arezzo-valdarno'
     | '/cookie-policy'
     | '/menu'
     | '/menu-ristorante-gourmet-arezzo'
@@ -116,6 +129,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AperitivoValdarnoProvinciaArezzoRoute: typeof AperitivoValdarnoProvinciaArezzoRoute
+  CateringMatrimoniEventiArezzoValdarnoRoute: typeof CateringMatrimoniEventiArezzoValdarnoRoute
   CookiePolicyRoute: typeof CookiePolicyRoute
   MenuRoute: typeof MenuRoute
   MenuRistoranteGourmetArezzoRoute: typeof MenuRistoranteGourmetArezzoRoute
@@ -125,39 +139,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/privacy': {
-      id: '/privacy'
-      path: '/privacy'
-      fullPath: '/privacy'
-      preLoaderRoute: typeof PrivacyRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/menu-ristorante-gourmet-arezzo': {
-      id: '/menu-ristorante-gourmet-arezzo'
-      path: '/menu-ristorante-gourmet-arezzo'
-      fullPath: '/menu-ristorante-gourmet-arezzo'
-      preLoaderRoute: typeof MenuRistoranteGourmetArezzoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/menu': {
-      id: '/menu'
-      path: '/menu'
-      fullPath: '/menu'
-      preLoaderRoute: typeof MenuRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/cookie-policy': {
-      id: '/cookie-policy'
-      path: '/cookie-policy'
-      fullPath: '/cookie-policy'
-      preLoaderRoute: typeof CookiePolicyRouteImport
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/aperitivo-valdarno-provincia-arezzo': {
@@ -167,11 +153,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AperitivoValdarnoProvinciaArezzoRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
+    '/catering-matrimoni-eventi-arezzo-valdarno': {
+      id: '/catering-matrimoni-eventi-arezzo-valdarno'
+      path: '/catering-matrimoni-eventi-arezzo-valdarno'
+      fullPath: '/catering-matrimoni-eventi-arezzo-valdarno'
+      preLoaderRoute: typeof CateringMatrimoniEventiArezzoValdarnoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cookie-policy': {
+      id: '/cookie-policy'
+      path: '/cookie-policy'
+      fullPath: '/cookie-policy'
+      preLoaderRoute: typeof CookiePolicyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/menu': {
+      id: '/menu'
+      path: '/menu'
+      fullPath: '/menu'
+      preLoaderRoute: typeof MenuRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/menu-ristorante-gourmet-arezzo': {
+      id: '/menu-ristorante-gourmet-arezzo'
+      path: '/menu-ristorante-gourmet-arezzo'
+      fullPath: '/menu-ristorante-gourmet-arezzo'
+      preLoaderRoute: typeof MenuRistoranteGourmetArezzoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -180,6 +201,8 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AperitivoValdarnoProvinciaArezzoRoute: AperitivoValdarnoProvinciaArezzoRoute,
+  CateringMatrimoniEventiArezzoValdarnoRoute:
+    CateringMatrimoniEventiArezzoValdarnoRoute,
   CookiePolicyRoute: CookiePolicyRoute,
   MenuRoute: MenuRoute,
   MenuRistoranteGourmetArezzoRoute: MenuRistoranteGourmetArezzoRoute,
