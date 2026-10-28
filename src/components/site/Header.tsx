@@ -10,6 +10,7 @@ const sections = [
   { key: "kitchen", href: "/#la-cucina" },
   { key: "women", href: "/#le-protagoniste" },
   { key: "menu", href: "/menu-ristorante-gourmet-arezzo" },
+  { key: "catering", href: CATERING_PATH },
   { key: "experiences", href: "/#esperienze" },
   { key: "place", href: "/#il-luogo" },
   { key: "contact", href: "/#contatti" },
