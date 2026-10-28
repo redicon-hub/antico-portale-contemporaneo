@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "@tanstack/react-router";
 import { useLang } from "@/lib/i18n";
 import { media } from "@/lib/media";
+import { contact } from "@/lib/contact";
+import { CATERING_PATH } from "@/lib/catering-content";
 
 const sections = [
   { key: "restaurant", href: "/#il-ristorante" },
@@ -46,6 +49,10 @@ export function Header() {
   const { t, lang, setLang } = useLang();
   const [solid, setSolid] = useState(false);
   const [open, setOpen] = useState(false);
+  const { pathname } = useLocation();
+  const isCatering = pathname.startsWith(CATERING_PATH);
+  const ctaHref = isCatering ? contact.emailHref : "/#contatti";
+  const ctaLabel = isCatering ? (lang === "it" ? "Contattaci" : "Contact us") : t.book;
 
   useEffect(() => {
     const onScroll = () => setSolid(window.scrollY > 80);
