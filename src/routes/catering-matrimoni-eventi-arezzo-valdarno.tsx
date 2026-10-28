@@ -9,9 +9,9 @@ import { cateringCopy, cateringGallery, cateringMedia, CATERING_PATH } from "@/l
 
 const SITE = "https://www.anticoportalevaldambra.com";
 const PAGE_URL = `${SITE}${CATERING_PATH}`;
-const title = "Catering matrimoni ed eventi in provincia di Arezzo e Valdarno | Antico Portale";
+const title = "Catering matrimoni ed eventi in provincia di Arezzo, Valdarno e in tutta la Toscana | Antico Portale";
 const description =
-  "Catering gourmet per matrimoni, feste private ed eventi aziendali in qualsiasi location in provincia di Arezzo, Valdarno e Valdambra. Finger food, live cooking, open bar.";
+  "Catering gourmet per matrimoni, feste private ed eventi aziendali in qualsiasi location in provincia di Arezzo, Valdarno, Valdambra e in tutta la Toscana. Finger food, live cooking, open bar.";
 
 export const Route = createFileRoute("/catering-matrimoni-eventi-arezzo-valdarno")({
   head: () => ({
