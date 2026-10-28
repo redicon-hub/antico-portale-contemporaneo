@@ -53,7 +53,7 @@ export const cateringCopy = {
     ctaText:
       "Matrimoni, feste private ed eventi aziendali in qualsiasi location: catering gourmet, finger food d'autore e la nostra cucina toscana contemporanea, dove volete voi.",
     ctaButton: "Scopri il catering",
-    eyebrow: "Catering in Toscana e Chianti",
+    eyebrow: "Catering in tutta la Toscana",
     h1: "Catering per matrimoni ed eventi in provincia di Arezzo e Valdarno",
     subtitle: "Tradizione e contemporaneità, in qualsiasi location. Il vostro racconto, la nostra passione.",
     introEyebrow: "Benvenuti",
@@ -106,7 +106,7 @@ export const cateringCopy = {
     ctaText:
       "Weddings, private parties and corporate events at any venue: gourmet catering, signature finger food and our contemporary Tuscan cuisine, wherever you wish.",
     ctaButton: "Discover our catering",
-    eyebrow: "Catering across Tuscany & Chianti",
+    eyebrow: "Catering across all of Tuscany",
     h1: "Wedding and event catering in the province of Arezzo and Valdarno",
     subtitle: "Tradition and contemporary flair, at any venue. Your story, our passion.",
     introEyebrow: "Welcome",
