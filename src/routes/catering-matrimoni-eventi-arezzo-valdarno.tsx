@@ -193,6 +193,9 @@ function CateringContent() {
             <a href={contact.phoneHref} className="border border-ivory/50 px-8 py-4 text-[0.8rem] tracking-[0.14em] transition-colors duration-500 hover:border-ivory">
               {c.call}
             </a>
+            <a href={contact.emailHref} className="border border-ivory/50 px-8 py-4 text-[0.8rem] tracking-[0.14em] transition-colors duration-500 hover:border-ivory">
+              {contact.email}
+            </a>
           </div>
           <CateringForm />
           <Link to="/" className="mt-12 inline-block border-b border-ivory/50 pb-2 text-[0.78rem] tracking-[0.14em] hover:opacity-70">
