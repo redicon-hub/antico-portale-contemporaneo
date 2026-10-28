@@ -16,7 +16,8 @@ export const contact = {
   phoneHref: "tel:+390559955514",
   whatsapp: "+39 393 632 8095",
   whatsappHref: "https://wa.me/393936328095",
-  email: "",
+  email: "mmhospitality2026@gmail.com",
+  emailHref: "mailto:mmhospitality2026@gmail.com",
   hours: [
     { key: "mon", open: null },
     { key: "tue", open: "18:30 – 22:00" },
