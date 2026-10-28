@@ -103,14 +103,14 @@ export function Header() {
               {t.langLabel}
             </button>
             <a
-              href="/#contatti"
+              href={ctaHref}
               className={`hidden border px-5 py-2.5 text-[0.78rem] tracking-[0.12em] transition-colors duration-500 sm:inline-block ${
                 solid
                   ? "border-forest-deep bg-forest-deep text-ivory hover:bg-transparent hover:text-forest-deep"
                   : "border-ivory/70 text-ivory hover:bg-ivory hover:text-ink"
               }`}
             >
-              {t.book}
+              {ctaLabel}
             </a>
             <button
               onClick={() => setOpen(true)}
@@ -170,11 +170,11 @@ export function Header() {
           </nav>
           <div className="px-5 pb-8">
             <a
-              href="/#contatti"
+              href={ctaHref}
               onClick={() => setOpen(false)}
               className="block border border-ivory py-4 text-center text-[0.8rem] tracking-[0.14em]"
             >
-              {t.book}
+              {ctaLabel}
             </a>
           </div>
         </div>
@@ -182,10 +182,10 @@ export function Header() {
 
       {/* CTA mobile fissa, discreta */}
       <a
-        href="/#contatti"
+        href={ctaHref}
         className="fixed bottom-4 left-1/2 z-40 -translate-x-1/2 border border-forest-deep/25 bg-background/95 px-6 py-3 text-[0.75rem] tracking-[0.14em] text-forest-deep shadow-sm backdrop-blur sm:hidden"
       >
-        {t.book}
+        {ctaLabel}
       </a>
     </>
   );
