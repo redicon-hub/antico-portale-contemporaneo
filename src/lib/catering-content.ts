@@ -53,7 +53,7 @@ export const cateringCopy = {
     ctaText:
       "Matrimoni, feste private ed eventi aziendali in qualsiasi location: catering gourmet, finger food d'autore e la nostra cucina toscana contemporanea, dove volete voi.",
     ctaButton: "Scopri il catering",
-    eyebrow: "Catering gourmet · Provincia di Arezzo",
+    eyebrow: "Catering in Toscana e Chianti",
     h1: "Catering per matrimoni ed eventi in provincia di Arezzo e Valdarno",
     subtitle: "Tradizione e contemporaneità, in qualsiasi location. Il vostro racconto, la nostra passione.",
     introEyebrow: "Benvenuti",
@@ -69,9 +69,9 @@ export const cateringCopy = {
     occasionsEyebrow: "Occasioni",
     occasionsTitle: "Per ogni momento da ricordare",
     occasions: [
-      { k: "Matrimoni", v: "Cerimonia, aperitivo con corner, cena servita e millefoglie nuziale preparata dal vivo." },
+      { k: "Matrimoni", v: "Cerimonia, aperitivo con corner, cena servita e torta nuziale." },
       { k: "Eventi aziendali", v: "Cene di gala, lanci, team building e ricevimenti con servizio curato e puntuale." },
-      { k: "Feste private", v: "Compleanni, anniversari, welcome dinner e brunch di saluto, in villa, in giardino o a casa." },
+      { k: "Feste private", v: "Compleanni, anniversari, welcome dinner e brunch di saluto, in villa, in giardino o nella vostra location." },
     ],
     expEyebrow: "Signature experience",
     expTitle: "Le nostre esperienze",
@@ -88,8 +88,8 @@ export const cateringCopy = {
     fingerEyebrow: "Finger food gourmet",
     fingerTitle: "Piccoli bocconi, grande cucina.",
     fingerText:
-      "Bruschette d'autore, mini tartare di Chianina con capperi, crocchette di melanzane e maionese al basilico, crocchette di pesce, pecorini toscani con miele locale e confetture della casa. La tradizione, ripensata in un morso.",
-    cakeTitle: "Millefoglie nuziale, dal vivo",
+      "Bruschette d'autore, mini tartare di Chianina con capperi, crocchette di melanzane e maionese al basilico, pecorini toscani con miele locale e confetture della casa. La tradizione, ripensata in un morso.",
+    cakeTitle: "Millefoglie nuziale",
     cakeText: "Sfoglia croccante e Chantilly leggera, con frutti di bosco o fragole. Brindisi con bollicine per gli sposi incluso.",
     formTitle: "Raccontateci il vostro evento",
     formText: "Data, location, numero di ospiti: vi prepariamo una proposta su misura.",
@@ -106,7 +106,7 @@ export const cateringCopy = {
     ctaText:
       "Weddings, private parties and corporate events at any venue: gourmet catering, signature finger food and our contemporary Tuscan cuisine, wherever you wish.",
     ctaButton: "Discover our catering",
-    eyebrow: "Gourmet catering · Province of Arezzo",
+    eyebrow: "Catering across Tuscany & Chianti",
     h1: "Wedding and event catering in the province of Arezzo and Valdarno",
     subtitle: "Tradition and contemporary flair, at any venue. Your story, our passion.",
     introEyebrow: "Welcome",
@@ -122,9 +122,9 @@ export const cateringCopy = {
     occasionsEyebrow: "Occasions",
     occasionsTitle: "For every moment worth remembering",
     occasions: [
-      { k: "Weddings", v: "Ceremony, aperitivo corners, plated dinner and a live millefoglie wedding cake." },
+      { k: "Weddings", v: "Ceremony, aperitivo corners, plated dinner and wedding cake." },
       { k: "Corporate events", v: "Gala dinners, launches, team building and receptions with precise service." },
-      { k: "Private parties", v: "Birthdays, anniversaries, welcome dinners and farewell brunches, at a villa, garden or home." },
+      { k: "Private parties", v: "Birthdays, anniversaries, welcome dinners and farewell brunches, at a villa, a garden or your chosen venue." },
     ],
     expEyebrow: "Signature experience",
     expTitle: "Our experiences",
@@ -141,8 +141,8 @@ export const cateringCopy = {
     fingerEyebrow: "Gourmet finger food",
     fingerTitle: "Small bites, serious cooking.",
     fingerText:
-      "Signature bruschette, mini Chianina tartare with capers, eggplant croquettes with basil mayo, fish croquettes, Tuscan pecorino with local honey and house jams. Tradition, rethought in a single bite.",
-    cakeTitle: "Live millefoglie wedding cake",
+      "Signature bruschette, mini Chianina tartare with capers, eggplant croquettes with basil mayo, Tuscan pecorino with local honey and house jams. Tradition, rethought in a single bite.",
+    cakeTitle: "Millefoglie wedding cake",
     cakeText: "Crisp puff pastry and light Chantilly with wild berries or strawberries. A toast with sparkling wine for the couple included.",
     formTitle: "Tell us about your event",
     formText: "Date, venue, number of guests: we'll prepare a tailored proposal.",
